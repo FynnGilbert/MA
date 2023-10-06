@@ -11,3 +11,6 @@ env.bak/
 venv.bak/
 
 truck-item-infos/
+
+# Jupyter Notebook
+/.ipynb_checkpoints
