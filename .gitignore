@@ -9,8 +9,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+data/3D
 
 truck-item-infos/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+.DS_Store
