@@ -1,0 +1,34 @@
+dataset: B
+instance: VA
++-----------+
+2D Packing MIP with Time Limit 2.7737011224665267 [s] in Truck P334653501
+Stack 0 with items: ['0091017300_26102022011520']
+Stack 1 with items: ['0091017300_26102022011520']
+Stack 2 with items: ['0091017300_26102022011520']
+Stack 3 with items: ['0091017300_26102022002459']
+Stack 4 with items: ['0091017300_26102022002459']
+Stack 5 with items: ['0091017300_26102022002459']
+Stack 6 with items: ['0091017300_26102022002459']
+Stack 7 with items: ['0091017300_26102022002459']
+Stack 8 with items: ['0091017300_26102022002459']
+Stack 9 with items: ['0091017300_26102022011520']
+Stack 10 with items: ['0091017300_26102022002459']
+Stack 11 with items: ['0091017300_26102022002459']
+Stack 12 with items: ['0091017300_26102022012292', '0091017300_26102022012273', '0091017300_26102022003762']
+Stack 13 with items: ['0091017300_26102022007794', '0091017300_26102022007794']
+Stack 14 with items: ['0091017300_26102022005104']
+Stack 15 with items: ['0091017300_26102022005104']
+Stack 16 with items: ['0091017300_26102022005104']
+Stack 17 with items: ['0091017300_26102022005104']
+Stack 18 with items: ['0091017300_26102022005104']
+Stack 19 with items: ['0091017300_26102022005104']
+Stack 20 with items: ['0091017300_26102022005104']
+Stack 21 with items: ['0091017300_26102022005104']
+MIP Improvement - 2D Vol: 25.21806 [m2] - packed 2D Vol Ratio: 0.7655755919854281 [%] - after 0.0 [s] without stacks:
+Stack 13 missing: ['0091017300_26102022007794', '0091017300_26102022007794']
+MIP Improvement - 2D Vol: 25.2181 [m2] - packed 2D Vol Ratio: 0.7655768063145113 [%] - after 0.051573991775512695 [s]
+MIP Improvement - 2D Vol: 25.2361 [m2] - packed 2D Vol Ratio: 0.766123254401943 [%] - after 0.26999402046203613 [s]
+MIP Improvement - 2D Vol: 26.4361 [m2] - packed 2D Vol Ratio: 0.8025531268973892 [%] - after 0.8494400978088379 [s]
+MIP Improvement - 2D Vol: 26.43612 [m2] - packed 2D Vol Ratio: 0.8025537340619308 [%] - after 0.8529590559192002 [s]
+Optimal Solution confirmed after 0.8530071130953729 [s]
+Stacks not packed:

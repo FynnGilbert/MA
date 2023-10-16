@@ -1,0 +1,11 @@
+dataset: A
+instance: FC
++-----------+
+3D Packing Heuristic in Truck P202541403
+Item 0091017600_03072022000014 with: 1
+Item 0091017600_03072022000132 with: 1
+Item 0091017600_03072022000680 with: 1
+Item 0091017600_03072022000849 with: 1
+Item 0091017600_03072022000889 with: 1
+Item 0091017600_03072022001045 with: 1
+Heuristic packed all items

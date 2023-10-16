@@ -1,0 +1,7 @@
+dataset: A
+instance: SA2
++-----------+
+3D Packing Heuristic in Truck P231237701
+Item 0090017100_03072022008122 with: 4
+Item 0090017100_03072022011930 with: 7
+Heuristic packed all items

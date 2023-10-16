@@ -1,0 +1,11 @@
+dataset: A
+instance: SA2
++-----------+
+3D Packing Heuristic in Truck P196150409
+Item 0090017100_03072022001740 with: 3
+Item 0090017100_03072022006587 with: 1
+Item 0090017100_03072022007173 with: 1
+Item 0090017100_03072022009011 with: 1
+Item 0090017100_03072022009388 with: 1
+Item 0090017100_03072022011861 with: 3
+Heuristic packed all items
