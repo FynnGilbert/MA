@@ -1,0 +1,11 @@
+dataset: B
+instance: CA2
++-----------+
+3D Packing Heuristic in Truck P353416303
+Item 0090012500_26102022000096 with: 2
+Item 0090012500_26102022000701 with: 2
+Item 0090012500_26102022000727 with: 1
+Item 0090012500_26102022000961 with: 1
+Item 0090012500_26102022001064 with: 6
+Item 0090012500_26102022001310 with: 6
+Heuristic packed all items

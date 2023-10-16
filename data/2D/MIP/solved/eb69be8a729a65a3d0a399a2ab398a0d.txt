@@ -1,0 +1,13 @@
+dataset: X
+instance: RM7
++-----------+
+2D Packing MIP with Time Limit 6.190741248118381 [s] in Truck P195390039
+Stack 0 with items: ['0090038200_14062023018942']
+Stack 1 with items: ['0090038200_14062023003421']
+Stack 2 with items: ['0090038200_14062023009738']
+Stack 3 with items: ['0090038200_14062023009574']
+MIP Improvement - 2D Vol: 24.96 [m2] - packed 2D Vol Ratio: 0.7577413479052824 [%] - after 0.0 [s] without stacks:
+Stack 0 missing: ['0090038200_14062023018942']
+Optimal Solution confirmed after 0.007340613752603531 [s]
+Stacks not packed:
+Stack 0 not in final solution with items: ['0090038200_14062023018942']

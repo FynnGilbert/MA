@@ -1,0 +1,20 @@
+dataset: C
+instance: BY2
++-----------+
+2D Packing MIP with Time Limit 2.632325452188175 [s] in Truck P065069203
+Stack 0 with items: ['0090016900_28022023032060', '0090016900_28022023024788']
+Stack 1 with items: ['0090016900_28022023024788', '0090016900_28022023020276']
+Stack 2 with items: ['0090016900_28022023024225']
+Stack 3 with items: ['0090016900_28022023020464']
+Stack 4 with items: ['0090016900_28022023020090']
+Stack 5 with items: ['0090016900_28022023020090']
+Stack 6 with items: ['0090016900_28022023018784']
+Stack 7 with items: ['0090016900_28022023017549']
+Stack 8 with items: ['0090016900_28022023007606']
+Stack 9 with items: ['0090016900_28022023002580']
+Stack 10 with items: ['0090016900_28022023034040']
+MIP Improvement - 2D Vol: 28.8 [m2] - packed 2D Vol Ratio: 0.8743169398907105 [%] - after 0.0 [s] without stacks:
+Stack 10 missing: ['0090016900_28022023034040']
+MIP Improvement - 2D Vol: 30.96 [m2] - packed 2D Vol Ratio: 0.9398907103825137 [%] - after 0.027761460281908512 [s]
+Optimal Solution confirmed after 0.02780414093285799 [s]
+Stacks not packed:

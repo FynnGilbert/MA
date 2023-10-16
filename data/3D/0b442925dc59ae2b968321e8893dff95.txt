@@ -1,0 +1,8 @@
+dataset: X
+instance: MT6
++-----------+
+3D Packing Heuristic in Truck P185501805
+Item 0091017700_14062023001138 with: 8
+Item 0091017700_14062023003655 with: 4
+Item 0091017700_14062023004909 with: 2
+Heuristic packed all items

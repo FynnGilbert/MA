@@ -1,0 +1,32 @@
+dataset: X
+instance: SA6
++-----------+
+2D Packing MIP with Time Limit 8.072073668985169 [s] in Truck P199050403
+Stack 0 with items: ['0090017100_14062023026553']
+Stack 1 with items: ['0090017100_14062023026553']
+Stack 2 with items: ['0090017100_14062023026553']
+Stack 3 with items: ['0090017100_14062023026553']
+Stack 4 with items: ['0090017100_14062023026553']
+Stack 5 with items: ['0090017100_14062023026553']
+Stack 6 with items: ['0090017100_14062023026553']
+Stack 7 with items: ['0090017100_14062023026553']
+Stack 8 with items: ['0090017100_14062023026553']
+Stack 9 with items: ['0090017100_14062023026553']
+Stack 10 with items: ['0090017100_14062023025641']
+Stack 11 with items: ['0090017100_14062023025641']
+Stack 12 with items: ['0090017100_14062023025641']
+Stack 13 with items: ['0090017100_14062023025641']
+Stack 14 with items: ['0090017100_14062023025641']
+Stack 15 with items: ['0090017100_14062023025641']
+Stack 16 with items: ['0090017100_14062023015433']
+Stack 17 with items: ['0090017100_14062023015433']
+Stack 18 with items: ['0090017100_14062023015433']
+Stack 19 with items: ['0090017100_14062023015433']
+Stack 20 with items: ['0090017100_14062023015433']
+Stack 21 with items: ['0090017100_14062023015433']
+Stack 22 with items: ['0090017100_14062023015433']
+Stack 23 with items: ['0090017100_14062023015433']
+Stack 24 with items: ['0090017100_14062023015433']
+MIP Improvement - 2D Vol: 30.0 [m2] - packed 2D Vol Ratio: 0.9107468123861567 [%] - after 0.0 [s] without stacks:
+Optimal Solution confirmed after 0.7357923341915011 [s]
+Stacks not packed:

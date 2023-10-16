@@ -1,0 +1,10 @@
+dataset: X
+instance: RM5
++-----------+
+3D Packing Heuristic in Truck P201394803
+Item 0090038200_14062023023375 with: 1
+Item 0090038200_14062023022725 with: 2
+Item 0090038200_14062023005549 with: 3
+Item 0090038200_14062023012763 with: 1
+Item 0090038200_14062023021231 with: 1
+Heuristic packed all items

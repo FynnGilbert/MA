@@ -1,0 +1,11 @@
+dataset: B
+instance: MA2
++-----------+
+3D Packing Heuristic in Truck P360356103
+Item 0090016200_26102022003933 with: 2
+Item 0090016200_26102022004332 with: 4
+Item 0090016200_26102022004770 with: 1
+Item 0090016200_26102022005775 with: 1
+Item 0090016200_26102022014260 with: 4
+Item 0090016200_26102022015062 with: 1
+Heuristic packed all items

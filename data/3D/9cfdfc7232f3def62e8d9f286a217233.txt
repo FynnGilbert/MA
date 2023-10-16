@@ -1,0 +1,7 @@
+dataset: A
+instance: VA2
++-----------+
+3D Packing Heuristic in Truck P193520201
+Item 0091017300_03072022014548 with: 4
+Item 0091017300_03072022009985 with: 4
+Heuristic packed all items

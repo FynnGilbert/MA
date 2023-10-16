@@ -1,0 +1,6 @@
+dataset: B
+instance: CL2
++-----------+
+3D Packing Heuristic in Truck P312010101
+Item 0090016100_26102022001390 with: 3
+Heuristic packed all items

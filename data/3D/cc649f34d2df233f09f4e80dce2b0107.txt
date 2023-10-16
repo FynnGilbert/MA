@@ -1,0 +1,7 @@
+dataset: X
+instance: BY7
++-----------+
+3D Packing Heuristic in Truck P240356043
+Item 0090016900_14062023001146 with: 2
+Item 0090016900_14062023036981 with: 22
+Heuristic packed all items

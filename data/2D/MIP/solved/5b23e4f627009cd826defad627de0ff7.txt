@@ -1,0 +1,22 @@
+dataset: X
+instance: SA6
++-----------+
+2D Packing MIP with Time Limit 8.721386238710204 [s] in Truck P187056807
+Stack 0 with items: ['0090017100_14062023007730']
+Stack 1 with items: ['0090017100_14062023005036']
+Stack 2 with items: ['0090017100_14062023005036']
+Stack 3 with items: ['0090017100_14062023005036']
+Stack 4 with items: ['0090017100_14062023003164']
+Stack 5 with items: ['0090017100_14062023002470']
+Stack 6 with items: ['0090017100_14062023002470']
+Stack 7 with items: ['0090017100_14062023002470']
+Stack 8 with items: ['0090017100_14062023002470']
+Stack 9 with items: ['0090017100_14062023001915']
+Stack 10 with items: ['0090017100_14062023001915']
+Stack 11 with items: ['0090017100_14062023001320']
+Stack 12 with items: ['0090017100_14062023004878']
+MIP Improvement - 2D Vol: 29.04 [m2] - packed 2D Vol Ratio: 0.8816029143897997 [%] - after 0.0 [s] without stacks:
+Stack 12 missing: ['0090017100_14062023004878']
+Optimal Solution confirmed after 7.788493664935231 [s]
+Stacks not packed:
+Stack 12 not in final solution with items: ['0090017100_14062023004878']

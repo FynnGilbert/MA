@@ -1,0 +1,9 @@
+dataset: A
+instance: CA
++-----------+
+3D Packing Heuristic in Truck P259437201
+Item 0090012500_03072022000694 with: 5
+Item 0090012500_03072022000782 with: 1
+Item 0090012500_03072022000822 with: 4
+Item 0090012500_03072022001096 with: 8
+Heuristic packed all items

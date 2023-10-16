@@ -1,0 +1,28 @@
+dataset: C
+instance: MT
++-----------+
+2D Packing MIP with Time Limit 2.733888199146763 [s] in Truck P073648301
+Stack 0 with items: ['0091017700_27022023004954']
+Stack 1 with items: ['0091017700_27022023003491']
+Stack 2 with items: ['0091017700_27022023004954']
+Stack 3 with items: ['0091017700_27022023004954']
+Stack 4 with items: ['0091017700_27022023004954']
+Stack 5 with items: ['0091017700_27022023003491']
+Stack 6 with items: ['0091017700_27022023004954']
+Stack 7 with items: ['0091017700_27022023003491']
+Stack 8 with items: ['0091017700_27022023003491']
+Stack 9 with items: ['0091017700_27022023003491']
+Stack 10 with items: ['0091017700_27022023003491']
+Stack 11 with items: ['0091017700_27022023004954']
+Stack 12 with items: ['0091017700_27022023003491']
+Stack 13 with items: ['0091017700_27022023003491']
+Stack 14 with items: ['0091017700_27022023003491']
+Stack 15 with items: ['0091017700_27022023004954']
+Stack 16 with items: ['0091017700_27022023003491']
+Stack 17 with items: ['0091017700_27022023004954']
+Stack 18 with items: ['0091017700_27022023003491']
+MIP Improvement - 2D Vol: 23.2713 [m2] - packed 2D Vol Ratio: 0.7064754098360656 [%] - after 0.0 [s] without stacks:
+Stack 17 missing: ['0091017700_27022023004954']
+Optimal Solution confirmed after 0.04233484482392669 [s]
+Stacks not packed:
+Stack 17 not in final solution with items: ['0091017700_27022023004954']

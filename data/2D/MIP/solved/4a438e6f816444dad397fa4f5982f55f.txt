@@ -1,0 +1,34 @@
+dataset: C
+instance: CL3
++-----------+
+2D Packing MIP with Time Limit 6.60603382147868 [s] in Truck P088213005
+Stack 0 with items: ['0090016100_28022023000422']
+Stack 1 with items: ['0090016100_28022023000422']
+Stack 2 with items: ['0090016100_28022023000422']
+Stack 3 with items: ['0090016100_28022023000422']
+Stack 4 with items: ['0090016100_28022023000422']
+Stack 5 with items: ['0090016100_28022023000435']
+Stack 6 with items: ['0090016100_28022023001487']
+Stack 7 with items: ['0090016100_28022023002255']
+Stack 8 with items: ['0090016100_28022023002895']
+Stack 9 with items: ['0090016100_28022023002895']
+Stack 10 with items: ['0090016100_28022023002895']
+Stack 11 with items: ['0090016100_28022023002895']
+Stack 12 with items: ['0090016100_28022023002895']
+Stack 13 with items: ['0090016100_28022023002975']
+Stack 14 with items: ['0090016100_28022023003500']
+Stack 15 with items: ['0090016100_28022023004871']
+Stack 16 with items: ['0090016100_28022023005034']
+Stack 17 with items: ['0090016100_28022023005034']
+MIP Improvement - 2D Vol: 16.80705 [m2] - packed 2D Vol Ratio: 0.5102322404371585 [%] - after 0.0 [s] without stacks:
+Stack 5 missing: ['0090016100_28022023000435']
+Stack 7 missing: ['0090016100_28022023002255']
+Stack 15 missing: ['0090016100_28022023004871']
+Stack 16 missing: ['0090016100_28022023005034']
+Stack 17 missing: ['0090016100_28022023005034']
+MIP Improvement - 2D Vol: 20.4612 [m2] - packed 2D Vol Ratio: 0.6211657559198543 [%] - after 0.2320098876953125 [s]
+MIP Improvement - 2D Vol: 21.6793 [m2] - packed 2D Vol Ratio: 0.6581451123254403 [%] - after 0.3980429172515869 [s]
+MIP Improvement - 2D Vol: 22.8973 [m2] - packed 2D Vol Ratio: 0.6951214329083183 [%] - after 0.7318508625030518 [s]
+MIP Improvement - 2D Vol: 22.89735 [m2] - packed 2D Vol Ratio: 0.6951229508196721 [%] - after 0.7351019608322531 [s]
+Optimal Solution confirmed after 0.7351488040294498 [s]
+Stacks not packed:

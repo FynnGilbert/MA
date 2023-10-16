@@ -1,0 +1,34 @@
+dataset: C
+instance: VA
++-----------+
+2D Packing MIP with Time Limit 4.00363577436743 [s] in Truck P076653501
+Stack 0 with items: ['0091017300_27022023036373', '0091017300_27022023036373']
+Stack 1 with items: ['0091017300_27022023036373', '0091017300_27022023030156', '0091017300_27022023013112']
+Stack 2 with items: ['0091017300_27022023013070']
+Stack 3 with items: ['0091017300_27022023013070']
+Stack 4 with items: ['0091017300_27022023016689']
+Stack 5 with items: ['0091017300_27022023016689']
+Stack 6 with items: ['0091017300_27022023016689']
+Stack 7 with items: ['0091017300_27022023016689']
+Stack 8 with items: ['0091017300_27022023016689']
+Stack 9 with items: ['0091017300_27022023016689']
+Stack 10 with items: ['0091017300_27022023016689']
+Stack 11 with items: ['0091017300_27022023038480']
+Stack 12 with items: ['0091017300_27022023038480']
+Stack 13 with items: ['0091017300_27022023038480']
+Stack 14 with items: ['0091017300_27022023038480']
+Stack 15 with items: ['0091017300_27022023038480']
+Stack 16 with items: ['0091017300_27022023038480']
+Stack 17 with items: ['0091017300_27022023038480']
+Stack 18 with items: ['0091017300_27022023038480']
+Stack 19 with items: ['0091017300_27022023038480']
+Stack 20 with items: ['0091017300_27022023038480']
+Stack 21 with items: ['0091017300_27022023038480']
+MIP Improvement - 2D Vol: 25.25418 [m2] - packed 2D Vol Ratio: 0.7666721311475411 [%] - after 0.0 [s] without stacks:
+Stack 0 missing: ['0091017300_27022023036373', '0091017300_27022023036373']
+MIP Improvement - 2D Vol: 25.2542 [m2] - packed 2D Vol Ratio: 0.7666727383120826 [%] - after 0.15750408172607422 [s]
+MIP Improvement - 2D Vol: 25.2722 [m2] - packed 2D Vol Ratio: 0.7672191863995144 [%] - after 0.3317599296569824 [s]
+MIP Improvement - 2D Vol: 26.4722 [m2] - packed 2D Vol Ratio: 0.8036490588949606 [%] - after 0.5652990341186523 [s]
+MIP Improvement - 2D Vol: 26.47224 [m2] - packed 2D Vol Ratio: 0.8036502732240437 [%] - after 0.5683376337401569 [s]
+Optimal Solution confirmed after 0.5683787758462131 [s]
+Stacks not packed:

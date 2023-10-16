@@ -1,0 +1,82 @@
+dataset: C
+instance: PA3
++-----------+
+2D Packing MIP with Time Limit 15 [s] in Truck P122655601
+Stack 0 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 1 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 2 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 3 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 4 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 5 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 6 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 7 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 8 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 9 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 10 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 11 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 12 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 13 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 14 with items: ['0091017200_28022023035389', '0091017200_28022023035389', '0091017200_28022023035389']
+Stack 15 with items: ['0091017200_28022023035389', '0091017200_28022023035389']
+Stack 16 with items: ['0091017200_28022023006191']
+Stack 17 with items: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+Stack 18 with items: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+Stack 19 with items: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+Stack 20 with items: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+Stack 21 with items: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+Stack 22 with items: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+Stack 23 with items: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+MIP Improvement - 2D Vol: 26.4 [m2] - packed 2D Vol Ratio: 0.8014571948998178 [%] - after 0.0 [s] without stacks:
+Stack 22 missing: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+Stack 23 missing: ['0091017200_28022023024732', '0091017200_28022023024732', '0091017200_28022023024732']
+MIP Improvement - 2D Vol: 27.6 [m2] - packed 2D Vol Ratio: 0.8378870673952642 [%] - after 0.9168732166290283 [s]
+MIP Improvement - 2D Vol: 28.8 [m2] - packed 2D Vol Ratio: 0.8743169398907105 [%] - after 1.1770181600004435 [s]
+Optimal Solution confirmed after 1.1771012980025262 [s]
+Stacks not packed:
+Set parameter Threads to value 8
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 40 physical cores, 40 logical processors, using up to 8 threads
+
+Optimize a model with 423369 rows, 1341531 columns and 8495169 nonzeros
+Model fingerprint: 0x6dfceab0
+Variable types: 10498 continuous, 1331033 integer (1036806 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 2e+05]
+  Objective range  [1e+00, 9e+03]
+  Bounds range     [1e+00, 8e+01]
+  RHS range        [1e+00, 8e+01]
+Presolve removed 423238 rows and 1340385 columns
+Presolve time: 3.21s
+Presolved: 131 rows, 1146 columns, 3567 nonzeros
+Variable types: 0 continuous, 1146 integer (1005 binary)
+Found heuristic solution: objective 2.114099e+07
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.1096758e+07   5.507000e+03   0.000000e+00      5s
+      76    2.1113381e+07   0.000000e+00   0.000000e+00      5s
+
+Root relaxation: objective 2.111338e+07, 76 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2.1113e+07    0   17 2.1141e+07 2.1113e+07  0.13%     -    5s
+H    0     0                    2.111413e+07 2.1113e+07  0.00%     -    5s
+
+Explored 1 nodes (86 simplex iterations) in 5.28 seconds (4.69 work units)
+Thread count was 8 (of 40 available processors)
+
+Solution count 2: 2.11141e+07 2.1141e+07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.111412900000e+07, best bound 2.111338100000e+07, gap 0.0035%
+
+User-callback calls 2380, time in user-callback 0.01 sec
+APLNS requires 5 trucks to repack. With transportation costs 20607000.0 and inventory costs 507129.0
+numTrucksRepack:  5
+Remaining Time:  1479.923566626152
+Faktor:  3.179887526824191

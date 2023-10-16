@@ -1,0 +1,36 @@
+dataset: C
+instance: CL3
++-----------+
+2D Packing MIP with Time Limit 15 [s] in Truck P090213003
+Stack 0 with items: ['0090016100_28022023000381']
+Stack 1 with items: ['0090016100_28022023000381']
+Stack 2 with items: ['0090016100_28022023000381']
+Stack 3 with items: ['0090016100_28022023000817']
+Stack 4 with items: ['0090016100_28022023000817']
+Stack 5 with items: ['0090016100_28022023000817']
+Stack 6 with items: ['0090016100_28022023000817']
+Stack 7 with items: ['0090016100_28022023001078']
+Stack 8 with items: ['0090016100_28022023001078']
+Stack 9 with items: ['0090016100_28022023001934']
+Stack 10 with items: ['0090016100_28022023002632']
+Stack 11 with items: ['0090016100_28022023003006']
+Stack 12 with items: ['0090016100_28022023003006']
+Stack 13 with items: ['0090016100_28022023003006']
+Stack 14 with items: ['0090016100_28022023003380']
+Stack 15 with items: ['0090016100_28022023004376']
+Stack 16 with items: ['0090016100_28022023004413']
+Stack 17 with items: ['0090016100_28022023004435']
+Stack 18 with items: ['0090016100_28022023004435']
+Stack 19 with items: ['0090016100_28022023004670']
+Stack 20 with items: ['0090016100_28022023000745', '0090016100_28022023001776']
+Stack 21 with items: ['0090016100_28022023000745']
+MIP Improvement - 2D Vol: 24.77382 [m2] - packed 2D Vol Ratio: 0.7520892531876139 [%] - after 0.0 [s] without stacks:
+Stack 11 missing: ['0090016100_28022023003006']
+Stack 19 missing: ['0090016100_28022023004670']
+MIP Improvement - 2D Vol: 24.8486 [m2] - packed 2D Vol Ratio: 0.7543594414086219 [%] - after 0.8185961246490479 [s]
+MIP Improvement - 2D Vol: 24.9234 [m2] - packed 2D Vol Ratio: 0.7566302367941713 [%] - after 0.8680250644683838 [s]
+MIP Improvement - 2D Vol: 26.1415 [m2] - packed 2D Vol Ratio: 0.7936095931997572 [%] - after 1.6971690654754639 [s]
+MIP Improvement - 2D Vol: 27.3595 [m2] - packed 2D Vol Ratio: 0.8305859137826351 [%] - after 2.0418801307678223 [s]
+MIP Improvement - 2D Vol: 27.35952 [m2] - packed 2D Vol Ratio: 0.8305865209471768 [%] - after 2.0479592639021575 [s]
+Optimal Solution confirmed after 2.048010013997555 [s]
+Stacks not packed:

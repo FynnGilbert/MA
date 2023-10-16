@@ -1,0 +1,11 @@
+dataset: A
+instance: PA
++-----------+
+3D Packing Heuristic in Truck P234530303
+Item 0091017200_03072022002904 with: 1
+Item 0091017200_03072022004936 with: 5
+Item 0091017200_03072022008427 with: 1
+Item 0091017200_03072022013567 with: 3
+Item 0091017200_03072022017579 with: 1
+Item 0091017200_03072022018742 with: 1
+Heuristic packed all items

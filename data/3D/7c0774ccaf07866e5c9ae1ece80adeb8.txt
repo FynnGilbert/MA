@@ -1,0 +1,7 @@
+dataset: X
+instance: FS2
++-----------+
+3D Packing Heuristic in Truck P185575001
+Item 0091017500_08062023000796 with: 4
+Item 0091017500_08062023001802 with: 7
+Heuristic packed all items

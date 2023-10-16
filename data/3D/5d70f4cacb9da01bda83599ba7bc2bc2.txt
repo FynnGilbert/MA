@@ -1,0 +1,11 @@
+dataset: C
+instance: DO2
++-----------+
+3D Packing Heuristic in Truck P122140905
+Item 0090019100_28022023000018 with: 1
+Item 0090019100_28022023010546 with: 2
+Item 0090019100_28022023011512 with: 2
+Item 0090019100_28022023014607 with: 2
+Item 0090019100_28022023017477 with: 2
+Item 0090019100_28022023021691 with: 1
+Heuristic packed all items

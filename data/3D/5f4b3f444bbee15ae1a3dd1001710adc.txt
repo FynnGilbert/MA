@@ -1,0 +1,10 @@
+dataset: C
+instance: RM3
++-----------+
+3D Packing Heuristic in Truck P107393801
+Item 0090038200_28022023005514 with: 7
+Item 0090038200_28022023008785 with: 3
+Item 0090038200_28022023009905 with: 3
+Item 0090038200_28022023011030 with: 1
+Item 0090038200_28022023012091 with: 1
+Heuristic packed all items

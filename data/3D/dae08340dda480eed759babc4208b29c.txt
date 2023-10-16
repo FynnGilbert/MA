@@ -1,0 +1,7 @@
+dataset: A
+instance: RT
++-----------+
+3D Packing Heuristic in Truck P208305103
+Item 0090018400_03072022000273 with: 4
+Item 0090018400_03072022000823 with: 6
+Heuristic packed all items
