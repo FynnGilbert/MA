@@ -16,3 +16,4 @@ truck-item-infos/
 # Jupyter Notebook
 .ipynb_checkpoints/
 .DS_Store
+notebooks/iframe_figures/
