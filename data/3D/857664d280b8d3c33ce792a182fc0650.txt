@@ -1,0 +1,6 @@
+dataset: X
+instance: MT7
++-----------+
+3D Packing Heuristic in Truck P200629701
+Item 0091017700_14062023000033 with: 16
+Heuristic packed all items

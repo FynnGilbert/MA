@@ -1,0 +1,7 @@
+dataset: B
+instance: PA2
++-----------+
+3D Packing Heuristic in Truck P347631905
+Item 0091017200_26102022014113 with: 7
+Item 0091017200_26102022017102 with: 2
+Heuristic packed all items

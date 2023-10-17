@@ -1,0 +1,37 @@
+dataset: C
+instance: CL
++-----------+
+2D Packing MIP with Time Limit 11.851757684832368 [s] in Truck P109213005
+Stack 0 with items: ['0090016100_27022023001000']
+Stack 1 with items: ['0090016100_27022023001852']
+Stack 2 with items: ['0090016100_27022023003033']
+Stack 3 with items: ['0090016100_27022023003033']
+Stack 4 with items: ['0090016100_27022023003033']
+Stack 5 with items: ['0090016100_27022023003033']
+Stack 6 with items: ['0090016100_27022023003033']
+Stack 7 with items: ['0090016100_27022023003315']
+Stack 8 with items: ['0090016100_27022023003551']
+Stack 9 with items: ['0090016100_27022023003903']
+Stack 10 with items: ['0090016100_27022023003903']
+Stack 11 with items: ['0090016100_27022023004014']
+Stack 12 with items: ['0090016100_27022023004160']
+Stack 13 with items: ['0090016100_27022023004183']
+Stack 14 with items: ['0090016100_27022023004970']
+Stack 15 with items: ['0090016100_27022023004970']
+Stack 16 with items: ['0090016100_27022023004970']
+Stack 17 with items: ['0090016100_27022023004970']
+Stack 18 with items: ['0090016100_27022023004970']
+MIP Improvement - 2D Vol: 17.57637 [m2] - packed 2D Vol Ratio: 0.5335874316939891 [%] - after 0.0 [s] without stacks:
+Stack 0 missing: ['0090016100_27022023001000']
+Stack 7 missing: ['0090016100_27022023003315']
+Stack 14 missing: ['0090016100_27022023004970']
+Stack 15 missing: ['0090016100_27022023004970']
+Stack 16 missing: ['0090016100_27022023004970']
+MIP Improvement - 2D Vol: 17.8755 [m2] - packed 2D Vol Ratio: 0.5426684881602915 [%] - after 0.17248010635375977 [s]
+MIP Improvement - 2D Vol: 20.3117 [m2] - packed 2D Vol Ratio: 0.6166272009714633 [%] - after 0.45369505882263184 [s]
+MIP Improvement - 2D Vol: 21.5297 [m2] - packed 2D Vol Ratio: 0.6536035215543412 [%] - after 0.49312305450439453 [s]
+MIP Improvement - 2D Vol: 22.8226 [m2] - packed 2D Vol Ratio: 0.6928536733454768 [%] - after 0.507681131362915 [s]
+MIP Improvement - 2D Vol: 24.0406 [m2] - packed 2D Vol Ratio: 0.7298299939283547 [%] - after 0.9606659412384033 [s]
+MIP Improvement - 2D Vol: 24.04062 [m2] - packed 2D Vol Ratio: 0.7298306010928962 [%] - after 0.9678832148201764 [s]
+Optimal Solution confirmed after 0.9679645360447466 [s]
+Stacks not packed:

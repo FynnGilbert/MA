@@ -1,0 +1,8 @@
+dataset: X
+instance: TR5
++-----------+
+3D Packing Heuristic in Truck P240276501
+Item 0090017000_14062023001578 with: 4
+Item 0090017000_14062023030953 with: 2
+Item 0090017000_14062023012204 with: 4
+Heuristic packed all items

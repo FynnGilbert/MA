@@ -1,0 +1,6 @@
+dataset: C
+instance: CL
++-----------+
+3D Packing Heuristic in Truck P083220905
+Item 0090016100_27022023002940 with: 22
+Heuristic packed all items

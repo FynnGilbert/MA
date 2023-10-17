@@ -1,0 +1,11 @@
+dataset: A
+instance: TA2
++-----------+
+3D Packing Heuristic in Truck P199388105
+Item 0090038300_03072022000643 with: 2
+Item 0090038300_03072022001661 with: 3
+Item 0090038300_03072022002342 with: 1
+Item 0090038300_03072022002542 with: 1
+Item 0090038300_03072022005331 with: 3
+Item 0090038300_03072022009822 with: 2
+Heuristic packed all items

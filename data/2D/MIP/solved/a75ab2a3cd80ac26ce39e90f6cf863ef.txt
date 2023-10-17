@@ -1,0 +1,33 @@
+dataset: C
+instance: CL3
++-----------+
+2D Packing MIP with Time Limit 15 [s] in Truck P090213003
+Stack 0 with items: ['0090016100_28022023000381']
+Stack 1 with items: ['0090016100_28022023000381']
+Stack 2 with items: ['0090016100_28022023000817']
+Stack 3 with items: ['0090016100_28022023000817']
+Stack 4 with items: ['0090016100_28022023000817']
+Stack 5 with items: ['0090016100_28022023000817']
+Stack 6 with items: ['0090016100_28022023001078']
+Stack 7 with items: ['0090016100_28022023001078']
+Stack 8 with items: ['0090016100_28022023001934']
+Stack 9 with items: ['0090016100_28022023002375']
+Stack 10 with items: ['0090016100_28022023002632']
+Stack 11 with items: ['0090016100_28022023003006']
+Stack 12 with items: ['0090016100_28022023003006']
+Stack 13 with items: ['0090016100_28022023003006']
+Stack 14 with items: ['0090016100_28022023003006']
+Stack 15 with items: ['0090016100_28022023003380']
+Stack 16 with items: ['0090016100_28022023004214']
+Stack 17 with items: ['0090016100_28022023004413']
+Stack 18 with items: ['0090016100_28022023004435']
+Stack 19 with items: ['0090016100_28022023004670']
+Stack 20 with items: ['0090016100_28022023000745', '0090016100_28022023001776']
+Stack 21 with items: ['0090016100_28022023000745']
+MIP Improvement - 2D Vol: 26.06667 [m2] - packed 2D Vol Ratio: 0.7913378870673953 [%] - after 0.0 [s] without stacks:
+Stack 6 missing: ['0090016100_28022023001078']
+MIP Improvement - 2D Vol: 26.1595 [m2] - packed 2D Vol Ratio: 0.794156041287189 [%] - after 3.0308189392089844 [s]
+MIP Improvement - 2D Vol: 27.3595 [m2] - packed 2D Vol Ratio: 0.8305859137826351 [%] - after 4.330388069152832 [s]
+MIP Improvement - 2D Vol: 27.35952 [m2] - packed 2D Vol Ratio: 0.8305865209471768 [%] - after 4.334533390123397 [s]
+Optimal Solution confirmed after 4.33459088485688 [s]
+Stacks not packed:

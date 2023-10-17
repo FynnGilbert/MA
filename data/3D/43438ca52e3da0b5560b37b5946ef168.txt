@@ -1,0 +1,8 @@
+dataset: A
+instance: BU
++-----------+
+3D Packing Heuristic in Truck P234422801
+Item 0090014400_03072022001022 with: 1
+Item 0090014400_03072022000274 with: 1
+Item 0090014400_03072022000734 with: 12
+Heuristic packed all items

@@ -1,0 +1,7 @@
+dataset: X
+instance: FC2
++-----------+
+3D Packing Heuristic in Truck P187532609
+Item 0091017600_08062023005186 with: 27
+Item 0091017600_08062023006515 with: 27
+Heuristic packed all items

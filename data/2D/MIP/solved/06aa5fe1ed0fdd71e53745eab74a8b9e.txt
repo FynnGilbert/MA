@@ -1,0 +1,25 @@
+dataset: X
+instance: BY3
++-----------+
+2D Packing MIP with Time Limit 2.4125754555719925 [s] in Truck P180068605
+Stack 0 with items: ['0090016900_08062023042127']
+Stack 1 with items: ['0090016900_08062023009291']
+Stack 2 with items: ['0090016900_08062023009291']
+Stack 3 with items: ['0090016900_08062023009291']
+Stack 4 with items: ['0090016900_08062023009291']
+Stack 5 with items: ['0090016900_08062023009291']
+Stack 6 with items: ['0090016900_08062023009291']
+Stack 7 with items: ['0090016900_08062023007716']
+Stack 8 with items: ['0090016900_08062023007716']
+Stack 9 with items: ['0090016900_08062023007716']
+Stack 10 with items: ['0090016900_08062023007716']
+Stack 11 with items: ['0090016900_08062023007716']
+Stack 12 with items: ['0090016900_08062023007716']
+Stack 13 with items: ['0090016900_08062023007716']
+MIP Improvement - 2D Vol: 28.8 [m2] - packed 2D Vol Ratio: 0.8743169398907105 [%] - after 0.0 [s] without stacks:
+Stack 0 missing: ['0090016900_08062023042127']
+Stack 13 missing: ['0090016900_08062023007716']
+MIP Improvement - 2D Vol: 31.2 [m2] - packed 2D Vol Ratio: 0.947176684881603 [%] - after 0.015809059143066406 [s]
+Optimal Solution confirmed after 0.021448255982249975 [s]
+Stacks not packed:
+Stack 0 not in final solution with items: ['0090016900_08062023042127']

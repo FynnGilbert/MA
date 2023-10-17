@@ -1,0 +1,104 @@
+dataset: X
+instance: MT5
++-----------+
+2D Packing MIP with Time Limit 15 [s] in Truck P208523401
+Stack 0 with items: ['0091017700_14062023000112', '0091017700_14062023000112', '0091017700_14062023000112']
+Stack 1 with items: ['0091017700_14062023004018', '0091017700_14062023004018', '0091017700_14062023004018']
+Stack 2 with items: ['0091017700_14062023004018', '0091017700_14062023004018', '0091017700_14062023004018']
+Stack 3 with items: ['0091017700_14062023004018', '0091017700_14062023000112']
+Stack 4 with items: ['0091017700_14062023004795', '0091017700_14062023003760', '0091017700_14062023000797']
+Stack 5 with items: ['0091017700_14062023000797', '0091017700_14062023001119', '0091017700_14062023004572']
+Stack 6 with items: ['0091017700_14062023001119', '0091017700_14062023001119', '0091017700_14062023003597']
+Stack 7 with items: ['0091017700_14062023004630', '0091017700_14062023003699', '0091017700_14062023004630']
+Stack 8 with items: ['0091017700_14062023003699', '0091017700_14062023003699', '0091017700_14062023003699']
+Stack 9 with items: ['0091017700_14062023004178', '0091017700_14062023004178', '0091017700_14062023004178']
+Stack 10 with items: ['0091017700_14062023004178', '0091017700_14062023004178', '0091017700_14062023004178']
+Stack 11 with items: ['0091017700_14062023004178', '0091017700_14062023002224', '0091017700_14062023002224']
+Stack 12 with items: ['0091017700_14062023002224', '0091017700_14062023004657', '0091017700_14062023005174']
+Stack 13 with items: ['0091017700_14062023001884']
+Stack 14 with items: ['0091017700_14062023000818', '0091017700_14062023000818']
+Stack 15 with items: ['0091017700_14062023001860', '0091017700_14062023001114']
+Stack 16 with items: ['0091017700_14062023002698', '0091017700_14062023003145']
+Stack 17 with items: ['0091017700_14062023002990', '0091017700_14062023003145']
+Stack 18 with items: ['0091017700_14062023004901', '0091017700_14062023004901']
+Stack 19 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 20 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 21 with items: ['0091017700_14062023004901', '0091017700_14062023004901']
+Stack 22 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 23 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 24 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 25 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 26 with items: ['0091017700_14062023004901', '0091017700_14062023004901']
+Stack 27 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 28 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 29 with items: ['0091017700_14062023004901', '0091017700_14062023004901']
+Stack 30 with items: ['0091017700_14062023004901', '0091017700_14062023004901']
+Stack 31 with items: ['0091017700_14062023003353', '0091017700_14062023003353']
+Stack 32 with items: ['0091017700_14062023004901', '0091017700_14062023004901']
+MIP Improvement - 2D Vol: 27.6903 [m2] - packed 2D Vol Ratio: 0.8406284153005465 [%] - after 0.0 [s] without stacks:
+Stack 0 missing: ['0091017700_14062023000112', '0091017700_14062023000112', '0091017700_14062023000112']
+MIP Improvement - 2D Vol: 28.8903 [m2] - packed 2D Vol Ratio: 0.8770582877959928 [%] - after 2.100841999053955 [s]
+Optimal Solution confirmed after 2.1093211979605258 [s]
+Stacks not packed:
+Set parameter Threads to value 8
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 40 physical cores, 40 logical processors, using up to 8 threads
+
+Optimize a model with 50035 rows, 182672 columns and 1099554 nonzeros
+Model fingerprint: 0x9f5c0ea4
+Variable types: 2148 continuous, 180524 integer (154679 binary)
+Coefficient statistics:
+  Matrix range     [2e-01, 2e+05]
+  Objective range  [2e+01, 2e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 49821 rows and 181344 columns
+Presolve time: 0.52s
+Presolved: 214 rows, 1328 columns, 4354 nonzeros
+Variable types: 0 continuous, 1328 integer (1148 binary)
+Found heuristic solution: objective 1500625.0000
+
+Root relaxation: objective 1.484006e+06, 77 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1484006.45    0   28 1500625.00 1484006.45  1.11%     -    0s
+H    0     0                    1487585.0000 1484006.45  0.24%     -    0s
+H    0     0                    1487285.0000 1484006.45  0.22%     -    0s
+H    0     0                    1486285.0000 1484044.98  0.15%     -    0s
+     0     0 1484054.81    0   36 1486285.00 1484054.81  0.15%     -    0s
+     0     0 1484054.81    0   35 1486285.00 1484054.81  0.15%     -    0s
+     0     0 1484054.81    0   35 1486285.00 1484054.81  0.15%     -    0s
+     0     0 1484054.81    0   35 1486285.00 1484054.81  0.15%     -    0s
+H    0     0                    1485960.0000 1484054.81  0.13%     -    0s
+H    0     0                    1485830.0000 1484054.81  0.12%     -    0s
+H    0     0                    1484190.0000 1484054.81  0.01%     -    0s
+
+Cutting planes:
+  Learned: 3
+  Gomory: 1
+  Cover: 7
+  Implied bound: 18
+  Clique: 4
+  MIR: 4
+  StrongCG: 4
+  Flow cover: 6
+  Zero half: 1
+  Relax-and-lift: 5
+
+Explored 1 nodes (178 simplex iterations) in 0.80 seconds (0.69 work units)
+Thread count was 8 (of 40 available processors)
+
+Solution count 7: 1.48419e+06 1.48583e+06 1.48596e+06 ... 1.50062e+06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.484190000000e+06, best bound 1.484055000000e+06, gap 0.0091%
+
+User-callback calls 801, time in user-callback 0.00 sec
+APLNS requires 7 trucks to repack. With transportation costs 1410300.0 and inventory costs 73890.0
+numTrucksRepack:  7
+Remaining Time:  325.69508635578677
+Faktor:  3.716312448237283

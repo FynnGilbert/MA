@@ -1,0 +1,104 @@
+dataset: C
+instance: BY
++-----------+
+2D Packing MIP with Time Limit 15 [s] in Truck P114167101
+Stack 0 with items: ['0090016900_27022023024391', '0090016900_27022023019045', '0090016900_27022023019045', '0090016900_27022023019045']
+Stack 1 with items: ['0090016900_27022023019045', '0090016900_27022023019045', '0090016900_27022023019045', '0090016900_27022023019045']
+Stack 2 with items: ['0090016900_27022023019045', '0090016900_27022023019045', '0090016900_27022023019045', '0090016900_27022023019045']
+Stack 3 with items: ['0090016900_27022023019045', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 4 with items: ['0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 5 with items: ['0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 6 with items: ['0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 7 with items: ['0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 8 with items: ['0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 9 with items: ['0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 10 with items: ['0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682', '0090016900_27022023017682']
+Stack 11 with items: ['0090016900_27022023017682', '0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382']
+Stack 12 with items: ['0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382']
+Stack 13 with items: ['0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382']
+MIP Improvement - 2D Vol: 23.868 [m2] - packed 2D Vol Ratio: 0.7245901639344262 [%] - after 0.0 [s] without stacks:
+Stack 12 missing: ['0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382']
+Stack 13 missing: ['0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382', '0090016900_27022023007382']
+MIP Improvement - 2D Vol: 25.857 [m2] - packed 2D Vol Ratio: 0.7849726775956285 [%] - after 0.07949614524841309 [s]
+MIP Improvement - 2D Vol: 27.846 [m2] - packed 2D Vol Ratio: 0.8453551912568307 [%] - after 0.08548270585015416 [s]
+Optimal Solution confirmed after 0.08554232306778431 [s]
+Stacks not packed:
+Set parameter Threads to value 8
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 40 physical cores, 40 logical processors, using up to 8 threads
+
+Optimize a model with 1103438 rows, 3535012 columns and 22612560 nonzeros
+Model fingerprint: 0x39cd7154
+Variable types: 13550 continuous, 3521462 integer (2634480 binary)
+Coefficient statistics:
+  Matrix range     [2e-01, 6e+05]
+  Objective range  [1e+00, 2e+03]
+  Bounds range     [1e+00, 8e+01]
+  RHS range        [1e+00, 8e+01]
+Presolve removed 1043975 rows and 3320343 columns (presolve time = 5s) ...
+Presolve removed 1102737 rows and 3530645 columns
+Presolve time: 9.95s
+Presolved: 701 rows, 4367 columns, 13485 nonzeros
+Variable types: 0 continuous, 4367 integer (3927 binary)
+Found heuristic solution: objective 1.042372e+07
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0407291e+07   8.642729e+01   0.000000e+00     14s
+    1383    1.0408946e+07   0.000000e+00   0.000000e+00     14s
+
+Root relaxation: objective 1.040895e+07, 1383 iterations, 0.02 seconds (0.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.0409e+07    0  102 1.0424e+07 1.0409e+07  0.14%     -   14s
+H    0     0                    1.042368e+07 1.0409e+07  0.14%     -   14s
+H    0     0                    1.041318e+07 1.0409e+07  0.04%     -   14s
+     0     0 1.0409e+07    0  119 1.0413e+07 1.0409e+07  0.04%     -   14s
+H    0     0                    1.041317e+07 1.0410e+07  0.03%     -   14s
+H    0     0                    1.041308e+07 1.0410e+07  0.03%     -   14s
+     0     0 1.0410e+07    0  122 1.0413e+07 1.0410e+07  0.03%     -   14s
+     0     0 1.0410e+07    0  117 1.0413e+07 1.0410e+07  0.03%     -   14s
+H    0     0                    1.041151e+07 1.0410e+07  0.02%     -   14s
+     0     0 1.0410e+07    0   90 1.0412e+07 1.0410e+07  0.02%     -   14s
+     0     0 1.0410e+07    0   78 1.0412e+07 1.0410e+07  0.02%     -   15s
+H    0     0                    1.041143e+07 1.0410e+07  0.02%     -   15s
+     0     0 1.0410e+07    0   94 1.0411e+07 1.0410e+07  0.02%     -   15s
+     0     0 1.0410e+07    0   67 1.0411e+07 1.0410e+07  0.02%     -   15s
+     0     2 1.0410e+07    0   64 1.0411e+07 1.0410e+07  0.02%     -   15s
+H   32    38                    1.041026e+07 1.0410e+07  0.01%  81.8   15s
+H   33    38                    1.041025e+07 1.0410e+07  0.00%  79.6   15s
+H   35    38                    1.040998e+07 1.0410e+07  0.00%  77.3   15s
+
+Cutting planes:
+  Learned: 2
+  Gomory: 50
+  Lift-and-project: 1
+  Cover: 36
+  Implied bound: 99
+  Clique: 160
+  MIR: 108
+  StrongCG: 53
+  Flow cover: 5
+  GUB cover: 8
+  Zero half: 1
+  RLT: 48
+  Relax-and-lift: 27
+
+Explored 39 nodes (7389 simplex iterations) in 16.10 seconds (14.70 work units)
+Thread count was 8 (of 40 available processors)
+
+Solution count 10: 1.041e+07 1.04102e+07 1.04103e+07 ... 1.04237e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.040998200000e+07, best bound 1.040974000000e+07, gap 0.0023%
+
+User-callback calls 4921, time in user-callback 0.02 sec
+APLNS requires 32 trucks to repack. With transportation costs 10150800.0 and inventory costs 259182.0
+numTrucksRepack:  32
+Remaining Time:  253.61267907591537
+Faktor:  2.534156088147943

@@ -1,0 +1,130 @@
+dataset: A
+instance: RT
++-----------+
+2D Packing MIP with Time Limit 15 [s] in Truck P194305201
+Stack 0 with items: ['0090018400_03072022000730']
+Stack 1 with items: ['0090018400_03072022000015']
+Stack 2 with items: ['0090018400_03072022000463']
+Stack 3 with items: ['0090018400_03072022000463']
+Stack 4 with items: ['0090018400_03072022000741']
+Stack 5 with items: ['0090018400_03072022000360']
+Stack 6 with items: ['0090018400_03072022000730']
+Stack 7 with items: ['0090018400_03072022000730']
+Stack 8 with items: ['0090018400_03072022000741']
+Stack 9 with items: ['0090018400_03072022000741']
+Stack 10 with items: ['0090018400_03072022000463']
+Stack 11 with items: ['0090018400_03072022000360']
+Stack 12 with items: ['0090018400_03072022000015']
+Stack 13 with items: ['0090018400_03072022000360']
+Stack 14 with items: ['0090018400_03072022000730']
+Stack 15 with items: ['0090018400_03072022000554']
+Stack 16 with items: ['0090018400_03072022000463']
+Stack 17 with items: ['0090018400_03072022000360']
+Stack 18 with items: ['0090018400_03072022000360']
+Stack 19 with items: ['0090018400_03072022000554']
+Stack 20 with items: ['0090018400_03072022000463']
+Stack 21 with items: ['0090018400_03072022000015']
+Stack 22 with items: ['0090018400_03072022000463']
+Stack 23 with items: ['0090018400_03072022000463']
+Stack 24 with items: ['0090018400_03072022000679', '0090018400_03072022000679']
+Stack 25 with items: ['0090018400_03072022000015']
+Stack 26 with items: ['0090018400_03072022000463']
+Stack 27 with items: ['0090018400_03072022000463']
+Stack 28 with items: ['0090018400_03072022000463']
+Stack 29 with items: ['0090018400_03072022000679']
+Stack 30 with items: ['0090018400_03072022000789']
+Stack 31 with items: ['0090018400_03072022000789']
+Stack 32 with items: ['0090018400_03072022000789']
+Stack 33 with items: ['0090018400_03072022000789']
+Stack 34 with items: ['0090018400_03072022000789']
+Stack 35 with items: ['0090018400_03072022000789']
+Stack 36 with items: ['0090018400_03072022000715', '0090018400_03072022000214']
+Stack 37 with items: ['0090018400_03072022000684']
+Stack 38 with items: ['0090018400_03072022000684']
+Stack 39 with items: ['0090018400_03072022000684']
+Stack 40 with items: ['0090018400_03072022000684']
+Stack 41 with items: ['0090018400_03072022000684']
+Stack 42 with items: ['0090018400_03072022000214', '0090018400_03072022000214']
+Stack 43 with items: ['0090018400_03072022000214']
+Stack 44 with items: ['0090018400_03072022000157']
+Stack 45 with items: ['0090018400_03072022000157']
+Stack 46 with items: ['0090018400_03072022000157']
+Stack 47 with items: ['0090018400_03072022000157']
+Stack 48 with items: ['0090018400_03072022000157']
+Stack 49 with items: ['0090018400_03072022000157']
+Stack 50 with items: ['0090018400_03072022000157']
+Stack 51 with items: ['0090018400_03072022000048']
+Stack 52 with items: ['0090018400_03072022000048']
+Stack 53 with items: ['0090018400_03072022000048']
+Stack 54 with items: ['0090018400_03072022000048']
+Stack 55 with items: ['0090018400_03072022000048']
+MIP Improvement - 2D Vol: 26.4 [m2] - packed 2D Vol Ratio: 0.8014571948998178 [%] - after 0.0 [s] without stacks:
+Stack 42 missing: ['0090018400_03072022000214', '0090018400_03072022000214']
+MIP Improvement - 2D Vol: 26.88 [m2] - packed 2D Vol Ratio: 0.8160291438979964 [%] - after 13.953772068023682 [s]
+Optimal Solution confirmed after 13.981813445920125 [s]
+Stacks not packed:
+Set parameter Threads to value 8
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 40 physical cores, 40 logical processors, using up to 8 threads
+
+Optimize a model with 6864 rows, 20587 columns and 120835 nonzeros
+Model fingerprint: 0x75c778dd
+Variable types: 460 continuous, 20127 integer (17509 binary)
+Coefficient statistics:
+  Matrix range     [2e-01, 3e+04]
+  Objective range  [5e+01, 2e+03]
+  Bounds range     [1e+00, 9e+01]
+  RHS range        [1e+00, 9e+01]
+Presolve removed 6787 rows and 20037 columns
+Presolve time: 0.06s
+Presolved: 77 rows, 550 columns, 1607 nonzeros
+Variable types: 0 continuous, 550 integer (460 binary)
+Found heuristic solution: objective 312270.00000
+
+Root relaxation: objective 3.014976e+05, 14 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 301497.619    0    5 312270.000 301497.619  3.45%     -    0s
+H    0     0                    308450.00000 301497.619  2.25%     -    0s
+H    0     0                    306830.00000 301497.619  1.74%     -    0s
+H    0     0                    305050.00000 301497.619  1.16%     -    0s
+     0     0 301541.847    0   10 305050.000 301541.847  1.15%     -    0s
+H    0     0                    303310.00000 301541.847  0.58%     -    0s
+H    0     0                    303020.00000 301563.150  0.48%     -    0s
+H    0     0                    302840.00000 301563.150  0.42%     -    0s
+     0     0 301563.150    0    7 302840.000 301563.150  0.42%     -    0s
+     0     0 301563.150    0    7 302840.000 301563.150  0.42%     -    0s
+     0     0 301563.150    0    7 302840.000 301563.150  0.42%     -    0s
+     0     0 301563.150    0    7 302840.000 301563.150  0.42%     -    0s
+     0     0 301563.150    0    7 302840.000 301563.150  0.42%     -    0s
+H    0     0                    301590.00000 301563.150  0.01%     -    0s
+     0     0 301563.150    0    8 301590.000 301563.150  0.01%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 4
+  Implied bound: 15
+  Clique: 2
+  MIR: 4
+  StrongCG: 4
+  Zero half: 1
+  RLT: 1
+  Relax-and-lift: 7
+
+Explored 1 nodes (44 simplex iterations) in 0.10 seconds (0.08 work units)
+Thread count was 8 (of 40 available processors)
+
+Solution count 8: 301590 302840 303020 ... 312270
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.015900000000e+05, best bound 3.015700000000e+05, gap 0.0066%
+
+User-callback calls 632, time in user-callback 0.00 sec
+APLNS requires 9 trucks to repack. With transportation costs 280500.0 and inventory costs 21090.0
+numTrucksRepack:  9
+Remaining Time:  275.2129219288472
+Faktor:  5.1

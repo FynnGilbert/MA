@@ -1,0 +1,36 @@
+dataset: C
+instance: VA3
++-----------+
+2D Packing MIP with Time Limit 5.475128122915071 [s] in Truck P102653501
+Stack 0 with items: ['0091017300_28022023017338']
+Stack 1 with items: ['0091017300_28022023017338']
+Stack 2 with items: ['0091017300_28022023017338']
+Stack 3 with items: ['0091017300_28022023002248']
+Stack 4 with items: ['0091017300_28022023002248']
+Stack 5 with items: ['0091017300_28022023002248']
+Stack 6 with items: ['0091017300_28022023002248']
+Stack 7 with items: ['0091017300_28022023017338']
+Stack 8 with items: ['0091017300_28022023019008', '0091017300_28022023016547', '0091017300_28022023015679']
+Stack 9 with items: ['0091017300_28022023014793', '0091017300_28022023014793']
+Stack 10 with items: ['0091017300_28022023014275']
+Stack 11 with items: ['0091017300_28022023004198']
+Stack 12 with items: ['0091017300_28022023010259']
+Stack 13 with items: ['0091017300_28022023010259']
+Stack 14 with items: ['0091017300_28022023010259']
+Stack 15 with items: ['0091017300_28022023015979']
+Stack 16 with items: ['0091017300_28022023015979']
+Stack 17 with items: ['0091017300_28022023015979']
+Stack 18 with items: ['0091017300_28022023010259']
+Stack 19 with items: ['0091017300_28022023015979']
+Stack 20 with items: ['0091017300_28022023010259']
+Stack 21 with items: ['0091017300_28022023010259']
+Stack 22 with items: ['0091017300_28022023010259']
+Stack 23 with items: ['0091017300_28022023015979']
+MIP Improvement - 2D Vol: 27.65418 [m2] - packed 2D Vol Ratio: 0.8395318761384336 [%] - after 0.0 [s] without stacks:
+Stack 9 missing: ['0091017300_28022023014793', '0091017300_28022023014793']
+MIP Improvement - 2D Vol: 27.6542 [m2] - packed 2D Vol Ratio: 0.8395324833029751 [%] - after 0.9351480007171631 [s]
+MIP Improvement - 2D Vol: 27.6722 [m2] - packed 2D Vol Ratio: 0.8400789313904069 [%] - after 1.6067190170288086 [s]
+MIP Improvement - 2D Vol: 28.8722 [m2] - packed 2D Vol Ratio: 0.8765088038858531 [%] - after 5.307538032531738 [s]
+MIP Improvement - 2D Vol: 28.87224 [m2] - packed 2D Vol Ratio: 0.8765100182149363 [%] - after 5.311888742726296 [s]
+Optimal Solution confirmed after 5.311929152812809 [s]
+Stacks not packed:
