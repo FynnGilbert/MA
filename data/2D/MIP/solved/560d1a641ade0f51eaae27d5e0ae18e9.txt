@@ -1,0 +1,105 @@
+dataset: X
+instance: SA4
++-----------+
+2D Packing MIP with Time Limit 14.408141141773154 [s] in Truck P237156201
+Stack 0 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 1 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 2 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 3 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 4 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 5 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 6 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 7 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 8 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 9 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 10 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 11 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+Stack 12 with items: ['0090017100_14062023002334', '0090017100_14062023002334']
+MIP Improvement - 2D Vol: 28.8 [m2] - packed 2D Vol Ratio: 0.8743169398907105 [%] - after 0.0 [s] without stacks:
+Stack 12 missing: ['0090017100_14062023002334', '0090017100_14062023002334']
+MIP Improvement - 2D Vol: 31.2 [m2] - packed 2D Vol Ratio: 0.947176684881603 [%] - after 0.03056553192436695 [s]
+Optimal Solution confirmed after 0.030634907074272633 [s]
+Stacks not packed:
+Set parameter Threads to value 8
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 40 physical cores, 40 logical processors, using up to 8 threads
+
+Optimize a model with 316658 rows, 1212538 columns and 7389714 nonzeros
+Model fingerprint: 0x7559ee2a
+Variable types: 7592 continuous, 1204946 integer (999267 binary)
+Coefficient statistics:
+  Matrix range     [2e-01, 5e+05]
+  Objective range  [1e+00, 2e+03]
+  Bounds range     [1e+00, 8e+01]
+  RHS range        [1e+00, 8e+01]
+Presolve removed 316231 rows and 1209147 columns (presolve time = 7s) ...
+Presolve removed 316231 rows and 1209147 columns
+Presolve time: 7.39s
+Presolved: 427 rows, 3391 columns, 13049 nonzeros
+Variable types: 0 continuous, 3391 integer (2960 binary)
+Found heuristic solution: objective 5593140.0000
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.5502130e+06   1.686228e+03   0.000000e+00      9s
+     768    5.5705035e+06   0.000000e+00   0.000000e+00      9s
+
+Root relaxation: objective 5.570504e+06, 768 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5570503.52    0  109 5593140.00 5570503.52  0.40%     -    8s
+H    0     0                    5591533.0000 5570503.52  0.38%     -    8s
+H    0     0                    5579351.0000 5570503.52  0.16%     -    8s
+     0     0 5571202.07    0  154 5579351.00 5571202.07  0.15%     -    8s
+     0     0 5571202.07    0  156 5579351.00 5571202.07  0.15%     -    8s
+H    0     0                    5577206.0000 5571202.07  0.11%     -    9s
+     0     0 5571218.42    0  152 5577206.00 5571218.42  0.11%     -    9s
+     0     0 5571220.73    0  156 5577206.00 5571220.73  0.11%     -    9s
+H    0     0                    5576809.0000 5571220.73  0.10%     -    9s
+     0     0 5571397.72    0  157 5576809.00 5571397.72  0.10%     -    9s
+H    0     0                    5575780.0000 5571397.72  0.08%     -    9s
+     0     0 5571397.72    0  157 5575780.00 5571397.72  0.08%     -    9s
+H    0     0                    5573847.0000 5571397.72  0.04%     -    9s
+     0     2 5571397.72    0  157 5573847.00 5571397.72  0.04%     -    9s
+H   31    39                    5573562.0000 5571457.48  0.04%  99.2    9s
+H   32    39                    5573511.0000 5571461.63  0.04%  96.2    9s
+H   36    39                    5573460.0000 5571461.63  0.04%  86.8    9s
+H   37    39                    5573448.0000 5571461.63  0.04%  84.8    9s
+H   70    54                    5573420.0000 5571461.63  0.04%  51.3    9s
+H  195   129                    5572523.0000 5571461.63  0.02%  32.7   10s
+H  227   157                    5572493.0000 5571569.76  0.02%  33.5   10s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 26
+  Cover: 70
+  Implied bound: 24
+  Projected implied bound: 1
+  Clique: 77
+  MIR: 62
+  StrongCG: 59
+  Flow cover: 45
+  GUB cover: 28
+  Inf proof: 2
+  Zero half: 9
+  RLT: 45
+  Relax-and-lift: 23
+
+Explored 2612 nodes (68618 simplex iterations) in 13.59 seconds (10.61 work units)
+Thread count was 8 (of 40 available processors)
+
+Solution count 10: 5.57249e+06 5.57252e+06 5.57342e+06 ... 5.57681e+06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.572493000000e+06, best bound 5.571936000000e+06, gap 0.0100%
+
+User-callback calls 8507, time in user-callback 0.02 sec
+APLNS requires 90 trucks to repack. With transportation costs 5359500.0 and inventory costs 212993.0
+numTrucksRepack:  90
+Remaining Time:  972.557948618196
+Faktor:  2.941545013559616

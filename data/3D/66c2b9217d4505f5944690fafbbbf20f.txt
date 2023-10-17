@@ -1,0 +1,11 @@
+dataset: X
+instance: AS6
++-----------+
+3D Packing Heuristic in Truck P213737001
+Item 0090018000_14062023003272 with: 3
+Item 0090018000_14062023006002 with: 5
+Item 0090018000_14062023007273 with: 1
+Item 0090018000_14062023008785 with: 1
+Item 0090018000_14062023009604 with: 3
+Item 0090018000_14062023014038 with: 1
+Heuristic packed all items

@@ -1,0 +1,11 @@
+dataset: C
+instance: VA
++-----------+
+3D Packing Heuristic in Truck P075655703
+Item 0091017300_27022023001783 with: 1
+Item 0091017300_27022023024850 with: 5
+Item 0091017300_27022023032169 with: 1
+Item 0091017300_27022023040369 with: 1
+Item 0091017300_27022023041041 with: 6
+Item 0091017300_27022023043521 with: 1
+Heuristic packed all items

@@ -1,0 +1,6 @@
+dataset: X
+instance: MA
++-----------+
+3D Packing Heuristic in Truck P192031101
+Item 0090016200_08062023011687 with: 12
+Heuristic packed all items
