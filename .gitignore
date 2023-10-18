@@ -10,7 +10,8 @@ ENV/
 env.bak/
 venv.bak/
 data/3D
-
+data/
+data
 truck-item-infos/
 
 # Jupyter Notebook
