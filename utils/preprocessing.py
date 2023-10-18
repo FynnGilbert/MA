@@ -126,6 +126,39 @@ def join_truck_loading_order(df: pl.DataFrame, truck_stops) -> pl.DataFrame:
     return df
     
 
+def append_truck_info(df: pl.DataFrame, truck_dims: pl.DataFrame) -> pl.DataFrame:
+    """
+    Add trucks into dataset adding them as rows
+    with exactly the same features as the original df
+    """
+
+    df = df.drop(["items", "Nesting height", "NestedHeight"])
+    truck_dims = (
+        truck_dims
+        .join(df, on = ["dataset", "instance", "truck_id"])
+        .unique()
+        #.drop(["dataset", "instance", "truck_id"])
+    )
+    
+    df = df.drop(["dataset", "instance", "truck_id"])
+    df = df.with_columns([
+        pl.lit(False).alias("truck")
+    ])
+    
+    truck_dims = truck_dims.with_columns([
+        pl.lit(False).alias("ForcedLength"),
+        pl.lit(False).alias("ForcedWidth"),
+        pl.lit("0-0-0").alias("packing_order"),
+        pl.lit(True).alias("truck")
+    ])
+    
+    truck_dims = truck_dims.collect()[df.columns].lazy().unique()
+
+    df = pl.concat([df, truck_dims])
+    df = df.sort(["index", "truck"])
+    
+    return df
+
 
 
 
