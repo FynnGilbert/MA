@@ -11,7 +11,8 @@ env.bak/
 venv.bak/
 data/3D
 data/*
-data
+data/
+*.txt
 truck-item-infos/
 
 # Jupyter Notebook
