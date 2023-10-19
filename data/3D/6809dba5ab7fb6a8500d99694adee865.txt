@@ -1,7 +1,0 @@
-dataset: A
-instance: CI2
-+-----------+
-3D Packing Heuristic in Truck P210436101
-Item 0090016800_03072022006884 with: 1
-Item 0090016800_03072022008446 with: 7
-Heuristic packed all items

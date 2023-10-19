@@ -1,8 +1,0 @@
-dataset: X
-instance: AS2
-+-----------+
-3D Packing Heuristic in Truck P226701401
-Item 0090018000_08062023002123 with: 1
-Item 0090018000_08062023004282 with: 4
-Item 0090018000_08062023011471 with: 2
-Heuristic packed all items

@@ -1,9 +1,0 @@
-dataset: C
-instance: MT2
-+-----------+
-3D Packing Heuristic in Truck P072570701
-Item 0091017700_28022023001130 with: 9
-Item 0091017700_28022023000731 with: 1
-Item 0091017700_28022023000644 with: 5
-Item 0091017700_28022023000806 with: 6
-Heuristic packed all items

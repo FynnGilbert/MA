@@ -1,9 +1,0 @@
-dataset: A
-instance: FS
-+-----------+
-3D Packing Heuristic in Truck P256633501
-Item 0091017500_03072022000117 with: 3
-Item 0091017500_03072022000128 with: 1
-Item 0091017500_03072022000444 with: 3
-Item 0091017500_03072022000812 with: 1
-Heuristic packed all items

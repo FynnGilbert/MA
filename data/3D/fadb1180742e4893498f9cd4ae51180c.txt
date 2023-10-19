@@ -1,8 +1,0 @@
-dataset: C
-instance: AS
-+-----------+
-3D Packing Heuristic in Truck P088730703
-Item 0090018000_27022023004683 with: 1
-Item 0090018000_27022023007408 with: 1
-Item 0090018000_27022023010527 with: 1
-Heuristic packed all items
