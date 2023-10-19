@@ -1,7 +1,0 @@
-dataset: B
-instance: TA
-+-----------+
-3D Packing Heuristic in Truck P327386401
-Item 0090038300_26102022006182 with: 2
-Item 0090038300_26102022004303 with: 19
-Heuristic packed all items

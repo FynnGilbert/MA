@@ -1,6 +1,0 @@
-dataset: C
-instance: TR2
-+-----------+
-3D Packing Heuristic in Truck P094277505
-Item 0090017000_28022023002799 with: 9
-Heuristic packed all items

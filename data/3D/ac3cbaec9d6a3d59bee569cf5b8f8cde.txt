@@ -1,9 +1,0 @@
-dataset: B
-instance: PA
-+-----------+
-3D Packing Heuristic in Truck P009513001
-Item 0091017200_26102022013732 with: 7
-Item 0091017200_26102022009377 with: 1
-Item 0091017200_26102022004032 with: 1
-Item 0091017200_26102022004104 with: 3
-Heuristic packed all items

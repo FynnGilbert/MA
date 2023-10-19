@@ -1,8 +1,0 @@
-dataset: A
-instance: MT
-+-----------+
-3D Packing Heuristic in Truck P236501803
-Item 0091017700_03072022000927 with: 2
-Item 0091017700_03072022001760 with: 1
-Item 0091017700_03072022002262 with: 21
-Heuristic packed all items

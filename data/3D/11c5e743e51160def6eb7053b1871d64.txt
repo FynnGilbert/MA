@@ -1,8 +1,0 @@
-dataset: C
-instance: BY2
-+-----------+
-3D Packing Heuristic in Truck P072217901
-Item 0090016900_28022023014071 with: 4
-Item 0090016900_28022023005683 with: 2
-Item 0090016900_28022023004481 with: 2
-Heuristic packed all items

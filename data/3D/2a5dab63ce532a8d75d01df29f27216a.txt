@@ -1,6 +1,0 @@
-dataset: A
-instance: TR2
-+-----------+
-3D Packing Heuristic in Truck P213274703
-Item 0090017000_03072022005474 with: 11
-Heuristic packed all items

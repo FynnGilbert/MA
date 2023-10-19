@@ -1,6 +1,0 @@
-dataset: B
-instance: FL
-+-----------+
-3D Packing Heuristic in Truck P319349503
-Item 0090015100_26102022009213 with: 1
-Heuristic packed all items

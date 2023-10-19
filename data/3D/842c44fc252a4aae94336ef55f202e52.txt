@@ -1,9 +1,0 @@
-dataset: C
-instance: SA3
-+-----------+
-3D Packing Heuristic in Truck P065157701
-Item 0090017100_28022023026318 with: 3
-Item 0090017100_28022023012027 with: 4
-Item 0090017100_28022023014538 with: 2
-Item 0090017100_28022023006260 with: 1
-Heuristic packed all items

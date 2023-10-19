@@ -1,7 +1,0 @@
-dataset: C
-instance: RM2
-+-----------+
-3D Packing Heuristic in Truck P073398201
-Item 0090038200_28022023003591 with: 2
-Item 0090038200_28022023008006 with: 11
-Heuristic packed all items

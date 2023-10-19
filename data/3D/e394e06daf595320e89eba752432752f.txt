@@ -1,9 +1,0 @@
-dataset: X
-instance: MT5
-+-----------+
-3D Packing Heuristic in Truck P179629401
-Item 0091017700_14062023000133 with: 1
-Item 0091017700_14062023000647 with: 2
-Item 0091017700_14062023000987 with: 2
-Item 0091017700_14062023001270 with: 15
-Heuristic packed all items
