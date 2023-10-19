@@ -1,7 +1,0 @@
-dataset: C
-instance: VA
-+-----------+
-3D Packing Heuristic in Truck P111512101
-Item 0091017300_27022023018896 with: 4
-Item 0091017300_27022023038938 with: 4
-Heuristic packed all items

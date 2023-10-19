@@ -1,8 +1,0 @@
-dataset: C
-instance: CL
-+-----------+
-3D Packing Heuristic in Truck P110010803
-Item 0090016100_27022023000724 with: 1
-Item 0090016100_27022023003019 with: 2
-Item 0090016100_27022023001289 with: 1
-Heuristic packed all items

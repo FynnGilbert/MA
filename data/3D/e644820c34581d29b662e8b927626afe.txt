@@ -1,7 +1,0 @@
-dataset: X
-instance: SA5
-+-----------+
-3D Packing Heuristic in Truck P201050407
-Item 0090017100_14062023006452 with: 6
-Item 0090017100_14062023025641 with: 3
-Heuristic packed all items

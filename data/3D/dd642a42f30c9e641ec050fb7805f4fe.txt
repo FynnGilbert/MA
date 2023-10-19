@@ -1,6 +1,0 @@
-dataset: X
-instance: AS6
-+-----------+
-3D Packing Heuristic in Truck P180700401
-Item 0090018000_14062023001991 with: 9
-Heuristic packed all items

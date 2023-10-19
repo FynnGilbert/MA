@@ -1,7 +1,0 @@
-dataset: X
-instance: BY5
-+-----------+
-3D Packing Heuristic in Truck P193064003
-Item 0090016900_14062023023235 with: 1
-Item 0090016900_14062023006238 with: 3
-Heuristic packed all items
