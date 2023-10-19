@@ -1,8 +1,0 @@
-dataset: X
-instance: MA5
-+-----------+
-3D Packing Heuristic in Truck P205137503
-Item 0090016200_14062023017951 with: 2
-Item 0090016200_14062023016828 with: 5
-Item 0090016200_14062023011341 with: 4
-Heuristic packed all items

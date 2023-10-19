@@ -1,7 +1,0 @@
-dataset: X
-instance: FC4
-+-----------+
-3D Packing Heuristic in Truck P207547302
-Item 0091017600_14062023000471 with: 7
-Item 0091017600_14062023002847 with: 6
-Heuristic packed all items

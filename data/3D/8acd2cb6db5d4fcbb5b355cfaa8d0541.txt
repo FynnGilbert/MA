@@ -1,8 +1,0 @@
-dataset: X
-instance: RM
-+-----------+
-3D Packing Heuristic in Truck P185394201
-Item 0090038200_08062023000114 with: 3
-Item 0090038200_08062023006403 with: 1
-Item 0090038200_08062023007926 with: 23
-Heuristic packed all items

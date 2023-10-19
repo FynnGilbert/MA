@@ -1,7 +1,0 @@
-dataset: B
-instance: DO2
-+-----------+
-3D Packing Heuristic in Truck P329042401
-Item 0090019100_26102022005751 with: 7
-Item 0090019100_26102022005793 with: 11
-Heuristic packed all items

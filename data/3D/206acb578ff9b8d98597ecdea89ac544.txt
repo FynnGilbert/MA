@@ -1,7 +1,0 @@
-dataset: C
-instance: FC2
-+-----------+
-3D Packing Heuristic in Truck P110532609
-Item 0091017600_28022023000313 with: 30
-Item 0091017600_28022023000757 with: 29
-Heuristic packed all items

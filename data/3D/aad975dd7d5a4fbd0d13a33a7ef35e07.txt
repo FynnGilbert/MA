@@ -1,9 +1,0 @@
-dataset: X
-instance: SA
-+-----------+
-3D Packing Heuristic in Truck P165056815
-Item 0090017100_08062023029091 with: 9
-Item 0090017100_08062023007125 with: 6
-Item 0090017100_08062023012857 with: 9
-Item 0090017100_08062023000053 with: 3
-Heuristic packed all items

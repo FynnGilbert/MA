@@ -1,6 +1,0 @@
-dataset: X
-instance: RM7
-+-----------+
-3D Packing Heuristic in Truck P173390505
-Item 0090038200_14062023014723 with: 4
-Heuristic packed all items
