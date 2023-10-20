@@ -98,7 +98,9 @@ def df_to_labeled_instance_files(df: pl.DataFrame, cwd:str) -> None:
             #raise AssertionError
             continue
         
-        path = os.path.join(path, hash_+".txt")    
+        path = os.path.join(path, hash_+".txt")
+        if os.path.exists(path):
+            continue
         with open(path, "w") as file:
             file.write(text)
 
@@ -114,11 +116,15 @@ if __name__ == "__main__":
     cwd, _ = os.path.split(cwd)
     ROOT = os.path.join(cwd, "raw-data")
 
+    all_paths = []
     for root, dirs, files in tqdm(os.walk(ROOT, topdown=False)):
         for name in files:
             path = os.path.join(root, name)
-            print(path, end="\r")
-            df = read_path_to_df(path)
-            df_to_labeled_instance_files(df, cwd)
+            all_paths.append(path)
+    
+    for path in tqdm(all_paths):
+        #print(path, end="\r")
+        df = read_path_to_df(path)
+        df_to_labeled_instance_files(df, cwd)
 
 
