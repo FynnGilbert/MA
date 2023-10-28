@@ -15,6 +15,7 @@ class TransformerEncoder(Layer):
         activation: str = "relu",
         dropout: float=0.05,
         use_bias: bool=False,
+        bias_regularizer = None,
         use_PreLN: bool=False,
         **kwargs
     ):
@@ -24,6 +25,7 @@ class TransformerEncoder(Layer):
             num_heads=num_heads, key_dim=key_dim,
             dropout=dropout,               # Hyperparameter
             use_bias=use_bias,                     # usually False, but technically Hyperparameter
+            bias_regularizer=bias_regularizer,
             name=f"Encoder-SelfAttentionLayer-{idx}"
         )
         
@@ -54,11 +56,12 @@ class TransformerEncoder(Layer):
         if self.use_PreLN:
             attention_inputs = self.layernorm1(attention_inputs)
 
-        self_attention_output = self.self_attention_layer(
+        self_attention_output, attention_scores = self.self_attention_layer(
             query=attention_inputs,
             value=attention_inputs,
             key = attention_inputs,
             use_causal_mask=False, # only makes sense for Time series / causal flow data
+            return_attention_scores=True
         )
 
         inputs = self.add1([inputs, self_attention_output])
@@ -80,4 +83,4 @@ class TransformerEncoder(Layer):
         if not self.use_PreLN:
             inputs = self.layernorm2(inputs)
 
-        return inputs
+        return inputs, attention_scores 
