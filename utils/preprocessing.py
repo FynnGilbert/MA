@@ -132,6 +132,18 @@ def append_truck_info(df: pl.DataFrame, truck_dims: pl.DataFrame) -> pl.DataFram
     with exactly the same features as the original df
     """
 
+    # Ok, this is a bit messy:
+    # since we have to include truck axle load 
+    # (in the boolean Forced Columns)
+    # We have to cast them to float before the
+    # axle load of type float can be merged
+    df = df.with_columns([
+        pl.col("ForcedWidth").cast(pl.Float64),
+        pl.col("ForcedLength").cast(pl.Float64)
+    ])
+
+
+
     df = df.drop(["items", "Nesting height", "NestedHeight"])
     truck_dims = (
         truck_dims
@@ -142,20 +154,20 @@ def append_truck_info(df: pl.DataFrame, truck_dims: pl.DataFrame) -> pl.DataFram
     
     df = df.drop(["dataset", "instance", "truck_id"])
     df = df.with_columns([
-        pl.lit(False).alias("truck")
+        pl.lit(False).alias("stack_not_included")
     ])
     
     truck_dims = truck_dims.with_columns([
-        pl.lit(False).alias("ForcedLength"),
-        pl.lit(False).alias("ForcedWidth"),
+        pl.col("EMmm").cast(pl.Float64).alias("ForcedLength"),
+        pl.col("EMmr").cast(pl.Float64).alias("ForcedWidth"),
         pl.lit("0-0-0").alias("packing_order"),
-        pl.lit(True).alias("truck")
+        pl.lit(False).alias("stack_not_included")
     ])
     
     truck_dims = truck_dims.collect()[df.columns].lazy().unique()
 
     df = pl.concat([df, truck_dims])
-    df = df.sort(["index", "truck"])
+    df = df.sort(["index", "Length"])
     
     return df
 
