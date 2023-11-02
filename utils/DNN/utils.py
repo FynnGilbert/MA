@@ -14,7 +14,7 @@ def get_attention_scores(
     
     # get input and output layer
     layer = model.get_layer(layer_name)
-    assert type(layer) == TransformerEncoder
+    #assert type(layer) == TransformerEncoder
 
     outputs = layer.output
     inputs=model.input
