@@ -74,7 +74,7 @@ class TransformerEncoder(Layer):
         ff_inputs = inputs
 
         if self.use_PreLN:
-            ff_inputs = self.layernorm1(ff_inputs)
+            ff_inputs = self.layernorm2(ff_inputs)
 
         feed_forward_output = self.feed_forward_layer(ff_inputs)
 
