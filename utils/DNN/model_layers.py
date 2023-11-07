@@ -16,7 +16,7 @@ class TransformerEncoder(Layer):
         dropout: float=0.05,
         use_bias: bool=False,
         bias_regularizer = None,
-        use_PreLN: bool=False,
+        use_PreLN: bool=None,
         **kwargs
     ):
         super().__init__(**kwargs)
@@ -53,7 +53,7 @@ class TransformerEncoder(Layer):
         
         attention_inputs = inputs
 
-        if self.use_PreLN:
+        if (self.use_PreLN is not None) and self.use_PreLN:
             attention_inputs = self.layernorm1(attention_inputs)
 
         self_attention_output, attention_scores = self.self_attention_layer(
@@ -66,21 +66,21 @@ class TransformerEncoder(Layer):
 
         inputs = self.add1([inputs, self_attention_output])
 
-        if not self.use_PreLN:
+        if (self.use_PreLN is not None) and not self.use_PreLN:
             inputs = self.layernorm1(inputs)
 
         #### Feed Forward Block ####
 
         ff_inputs = inputs
 
-        if self.use_PreLN:
-            ff_inputs = self.layernorm1(ff_inputs)
+        if (self.use_PreLN is not None) and self.use_PreLN:
+            ff_inputs = self.layernorm2(ff_inputs)
 
         feed_forward_output = self.feed_forward_layer(ff_inputs)
 
         inputs = self.add2([inputs, feed_forward_output])
 
-        if not self.use_PreLN:
+        if (self.use_PreLN is not None) and not self.use_PreLN:
             inputs = self.layernorm2(inputs)
 
         return inputs, attention_scores 
