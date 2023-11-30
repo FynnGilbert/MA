@@ -2,7 +2,7 @@
 # coding: utf-8
 
 from tensorflow.keras.layers import MultiHeadAttention, LayerNormalization
-from tensorflow.keras.layers import Add, Dense, Layer
+from tensorflow.keras.layers import Add, Dense, Layer, Dropout
 
 
 class TransformerEncoder(Layer):
@@ -13,6 +13,7 @@ class TransformerEncoder(Layer):
         key_dim: int,
         idx: int,
         activation: str = "relu",
+        upscale_factor: float = 1,
         dropout: float=0.05,
         use_bias: bool=False,
         bias_regularizer = None,
@@ -23,8 +24,8 @@ class TransformerEncoder(Layer):
 
         self.self_attention_layer = MultiHeadAttention(
             num_heads=num_heads, key_dim=key_dim,
-            dropout=dropout,               # Hyperparameter
-            use_bias=use_bias,                     # usually False, but technically Hyperparameter
+            dropout=dropout,
+            use_bias=use_bias,
             bias_regularizer=bias_regularizer,
             name=f"Encoder-SelfAttentionLayer-{idx}"
         )
@@ -35,10 +36,17 @@ class TransformerEncoder(Layer):
         self.layernorm1 = LayerNormalization(name=f"Encoder-1st-NormalizationLayer-{idx}")
         self.layernorm2 = LayerNormalization(name=f"Encoder-2nd-NormalizationLayer-{idx}")
 
-        self.feed_forward_layer = Dense(
-            units=units,
+        self.feed_forward_layer_1 = Dense(
+            units=units*upscale_factor,
             activation=activation,
-            name=f"Encoder-FeedForwardLayer_{idx}"
+            name=f"Encoder-FeedForwardLayer_1_{idx}"
+        )
+        self.feed_forward_layer_2 = Dense(
+            units=units,
+            name=f"Encoder-FeedForwardLayer_2_{idx}"
+        )
+        self.dropout_layer = Dropout(
+            rate=dropout
         )
 
         # Actual Parameters:
@@ -76,7 +84,9 @@ class TransformerEncoder(Layer):
         if (self.use_PreLN is not None) and self.use_PreLN:
             ff_inputs = self.layernorm2(ff_inputs)
 
-        feed_forward_output = self.feed_forward_layer(ff_inputs)
+        feed_forward_output = self.feed_forward_layer_1(ff_inputs)
+        feed_forward_output = self.feed_forward_layer_2(feed_forward_output)
+        feed_forward_output = self.dropout_layer(feed_forward_output)
 
         inputs = self.add2([inputs, feed_forward_output])
 
