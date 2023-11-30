@@ -79,8 +79,8 @@ def group_items_by_stack(df: pl.DataFrame) -> pl.DataFrame:
         pl.count("item_id").alias("items"),
         pl.max("Length"),
         pl.max("Width"),
-        pl.sum("NestedHeight"),
-        pl.last("Nesting height"),
+        #pl.sum("NestedHeight"),
+        #pl.last("Nesting height"),
         pl.sum("Weight"),
         pl.any("ForcedLength"),
         pl.any("ForcedWidth"),
@@ -114,7 +114,7 @@ def join_truck_loading_order(df: pl.DataFrame, truck_stops) -> pl.DataFrame:
                        "Plant dock loading order"]
     
     df = df.join(truck_stops, how = "left", on = truck_join_clms )
-    
+    df = df.drop(["items"])
     df = df.with_columns([
         pl.concat_str(pl.col(truck_info_clms), separator = "-").alias("packing_order")
     ])
@@ -144,7 +144,6 @@ def append_truck_info(df: pl.DataFrame, truck_dims: pl.DataFrame) -> pl.DataFram
 
 
 
-    df = df.drop(["items", "Nesting height", "NestedHeight"])
     truck_dims = (
         truck_dims
         .join(df, on = ["dataset", "instance", "truck_id"])
