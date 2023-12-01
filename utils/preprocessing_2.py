@@ -76,18 +76,18 @@ def group_items_by_stack(df: pl.DataFrame) -> pl.DataFrame:
     df = df.group_by(["index", "dataset", "instance", "truck_id", "stack_id"],
                     maintain_order = True)\
     .agg([
-        pl.count("item_id").alias("items"),
+        #pl.count("item_id").alias("items"),
         pl.max("Length"),
         pl.max("Width"),
         #pl.sum("NestedHeight"),
         #pl.last("Nesting height"),
         pl.sum("Weight"),
-        pl.any("ForcedLength"),
-        pl.any("ForcedWidth"),
+        pl.any("ForcedLength").cast(pl.Float32),
+        pl.any("ForcedWidth").cast(pl.Float32),
         # Logistic order info
         pl.first("Supplier code"),
         pl.first("Supplier dock"),
-        pl.first("Plant dock")
+        pl.first("Plant dock"),
     ]).sort(["index", "stack_id"]).drop(["stack_id"])
 
     return df
@@ -109,19 +109,10 @@ def join_truck_loading_order(df: pl.DataFrame, truck_stops) -> pl.DataFrame:
     
     truck_join_clms = ["truck_id", "dataset", "instance",
                        "Supplier code", "Supplier dock", "Plant dock"]
-    truck_info_clms = ["Supplier loading order",
-                       "Supplier dock loading order",
-                       "Plant dock loading order"]
     
     df = df.join(truck_stops, how = "left", on = truck_join_clms )
-    df = df.drop(["items"])
-    df = df.with_columns([
-        pl.concat_str(pl.col(truck_info_clms), separator = "-").alias("packing_order")
-    ])
     
-    df = df.drop(truck_join_clms[-3:]
-                 + truck_info_clms
-    )
+    df = df.drop(truck_join_clms[-3:])
     
     return df
     
@@ -132,42 +123,28 @@ def append_truck_info(df: pl.DataFrame, truck_dims: pl.DataFrame) -> pl.DataFram
     with exactly the same features as the original df
     """
 
-    # Ok, this is a bit messy:
-    # since we have to include truck axle load 
-    # (in the boolean Forced Columns)
-    # We have to cast them to float before the
-    # axle load of type float can be merged
-    df = df.with_columns([
-        pl.col("ForcedWidth").cast(pl.Float64),
-        pl.col("ForcedLength").cast(pl.Float64)
-    ])
-
-
-
+    # join to get instance id
     truck_dims = (
         truck_dims
-        .join(df, on = ["dataset", "instance", "truck_id"])
+        .join(df, on = ["dataset", "instance", "truck_id"], how="inner")
         .unique()
-        #.drop(["dataset", "instance", "truck_id"])
     )
     
     df = df.drop(["dataset", "instance", "truck_id"])
-    df = df.with_columns([
-        pl.lit(False).alias("stack_not_included")
-    ])
     
     truck_dims = truck_dims.with_columns([
-        pl.col("EMmm").cast(pl.Float64).alias("ForcedLength"),
-        pl.col("EMmr").cast(pl.Float64).alias("ForcedWidth"),
-        pl.lit("0-0-0").alias("packing_order"),
-        pl.lit(False).alias("stack_not_included")
+        pl.col("EMmm").cast(pl.Float32).alias("ForcedLength"),
+        pl.col("EMmr").cast(pl.Float32).alias("ForcedWidth"),
+        pl.lit(-1, dtype=pl.Int64).alias("Supplier loading order"),
+        pl.lit(-1, dtype=pl.Int64).alias("Supplier dock loading order"),
+        pl.lit(-1, dtype=pl.Int64).alias("Plant dock loading order"),
     ])
     
     truck_dims = truck_dims.collect()[df.columns].lazy().unique()
 
     df = pl.concat([df, truck_dims])
     df = df.sort(["index", "Length"])
-    
+
     return df
 
 
