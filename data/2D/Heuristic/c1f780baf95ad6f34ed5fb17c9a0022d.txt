@@ -1,5 +1,5 @@
 dataset: X
-instance: TR3
+instance: TR2
 +-----------+
 2D Packing Heuristic in Truck P209424707
 Min2DVol: 28.183932000000006 [m2]

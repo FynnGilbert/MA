@@ -1,5 +1,5 @@
 dataset: X
-instance: RM4
+instance: RM7
 +-----------+
 2D Packing Heuristic in Truck P192393607
 Min2DVol: 28.488599999999995 [m2]
