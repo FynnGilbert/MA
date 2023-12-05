@@ -1,5 +1,5 @@
 dataset: X
-instance: CC
+instance: CC3
 +-----------+
 2D Packing Heuristic in Truck P172570601
 Min2DVol: 13.574925000000004 [m2]

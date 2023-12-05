@@ -1,5 +1,5 @@
 dataset: A
-instance: PA2
+instance: PA
 +-----------+
 2D Packing Heuristic in Truck P259591303
 Min2DVol: 25.289105999999997 [m2]

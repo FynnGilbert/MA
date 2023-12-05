@@ -1,5 +1,5 @@
 dataset: X
-instance: CI7
+instance: CI4
 +-----------+
 2D Packing Heuristic in Truck P186402801
 Min2DVol: 32.89806 [m2]

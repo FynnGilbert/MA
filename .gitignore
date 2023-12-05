@@ -15,8 +15,15 @@ data/
 *.txt
 truck-item-infos/
 
+# Large raw-data files
+raw-data/All*
+
+
 # Jupyter Notebook
 .ipynb_checkpoints/
 .DS_Store
 notebooks/iframe_figures/
 notebooks/model.png
+
+# Trash
+.trashed/

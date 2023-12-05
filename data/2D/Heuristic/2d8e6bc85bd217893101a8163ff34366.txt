@@ -1,5 +1,5 @@
 dataset: C
-instance: RM3
+instance: RM2
 +-----------+
 2D Packing Heuristic in Truck P066396603
 Min2DVol: 31.21805999999999 [m2]

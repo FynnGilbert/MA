@@ -1,5 +1,5 @@
 dataset: X
-instance: SA
+instance: SA2
 +-----------+
 2D Packing Heuristic in Truck P171235303
 Min2DVol: 30.33000000000001 [m2]

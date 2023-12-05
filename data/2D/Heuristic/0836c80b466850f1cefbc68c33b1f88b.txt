@@ -1,5 +1,5 @@
 dataset: X
-instance: FS2
+instance: FS
 +-----------+
 2D Packing Heuristic in Truck P188574201
 Min2DVol: 17.724599999999995 [m2]

@@ -1,5 +1,5 @@
 dataset: C
-instance: AS2
+instance: AS3
 +-----------+
 2D Packing Heuristic in Truck P067731301
 Min2DVol: 34.56000000000002 [m2]
