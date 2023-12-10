@@ -1,9 +1,0 @@
-dataset: X
-instance: RM
-+-----------+
-2D Packing Heuristic in Truck P188390039
-Min2DVol: 24.0 [m2]
-Stack 0 with items: ['0090038200_08062023004385']
-Stack 1 with items: ['0090038200_08062023025788']
-Stack 2 with items: ['0090038200_08062023005612']
-Heuristic packed all stacks
