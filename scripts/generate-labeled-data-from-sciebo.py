@@ -55,6 +55,60 @@ def read_path_to_df(path: str) -> pl.DataFrame | pl.LazyFrame:
     
     return data
 
+test_instances = [
+ 'BY',
+ 'BY2',
+ 'BY3',
+ 'FS',
+ 'FS2',
+ 'FS3',
+ 'MA4',
+ 'MA5',
+ 'MA6',
+ 'MA7',
+ 'PA',
+ 'PA2',
+ 'PA3',
+ 'SA4',
+ 'SA5',
+ 'SA6',
+ 'SA7',
+ 'TA',
+ 'TA2',
+ 'TA3',
+ 'TR4',
+ 'TR5',
+ 'TR6',
+ 'TR7'
+]
+
+hold_instances = [
+ 'BY4',
+ 'BY5',
+ 'BY6',
+ 'BY7',
+ 'CC4',
+ 'CC5',
+ 'CC6',
+ 'CC7',
+ 'DO4',
+ 'DO5',
+ 'DO6',
+ 'DO7',
+ 'FS4',
+ 'FS5',
+ 'FS6',
+ 'FS7',
+ 'PA4',
+ 'PA5',
+ 'PA6',
+ 'PA7',
+ 'TA4',
+ 'TA5',
+ 'TA6',
+ 'TA7'
+]
+
 
 def df_to_labeled_instance_files(df: pl.DataFrame, cwd:str) -> None:
     """
@@ -69,13 +123,25 @@ def df_to_labeled_instance_files(df: pl.DataFrame, cwd:str) -> None:
         text += raw
         #print(text)
         
+        if dataset.startswith("X"):
+            if instance in hold_instances:
+                path = os.path.join(root, "holdout")
+            elif instance in test_instances:
+                path = os.path.join(root, "test")
+            else:
+                path = os.path.join(root, "train")
+        else:
+            path = os.path.join(root)
+
         if D == "3":
-            path = os.path.join(root, "3D")
+            #path = os.path.join(root, "3D")
+            continue
         elif D == "2":
-            path = os.path.join(root, "2D")
+            path = os.path.join(path, "2D")
             
             if (model == "Heuristik") | (model == "Heuristic"):
-                path = os.path.join(path, "Heuristic")
+                #path = os.path.join(path, "Heuristic")
+                continue
             elif model == "MIP":
                 path = os.path.join(path, "MIP")
                 
@@ -119,6 +185,8 @@ if __name__ == "__main__":
     all_paths = []
     for root, dirs, files in tqdm(os.walk(ROOT, topdown=False)):
         for name in files:
+            if not name.endswith(".out"):
+                continue
             path = os.path.join(root, name)
             all_paths.append(path)
     
