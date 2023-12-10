@@ -1,9 +1,0 @@
-dataset: X
-instance: AS6
-+-----------+
-2D Packing Heuristic in Truck P177708701
-Min2DVol: 3.5999999999999996 [m2]
-Stack 0 with items: ['0090018000_14062023010417', '0090018000_14062023006170', '0090018000_14062023010417', '0090018000_14062023010417']
-Stack 1 with items: ['0090018000_14062023000943']
-Stack 2 with items: ['0090018000_14062023012246']
-Heuristic packed all stacks

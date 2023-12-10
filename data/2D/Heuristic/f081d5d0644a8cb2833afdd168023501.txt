@@ -1,9 +1,0 @@
-dataset: X
-instance: FC5
-+-----------+
-2D Packing Heuristic in Truck P191549201
-Min2DVol: 15.84 [m2]
-Stack 0 with items: ['0091017600_14062023004220', '0091017600_14062023002519']
-Stack 1 with items: ['0091017600_14062023002300', '0091017600_14062023000370']
-Stack 2 with items: ['0091017600_14062023000351']
-Heuristic packed all stacks

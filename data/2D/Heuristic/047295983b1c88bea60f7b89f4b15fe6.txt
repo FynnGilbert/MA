@@ -1,9 +1,0 @@
-dataset: X
-instance: SA5
-+-----------+
-2D Packing Heuristic in Truck P208153101
-Min2DVol: 15.84 [m2]
-Stack 0 with items: ['0090017100_14062023015203', '0090017100_14062023015203']
-Stack 1 with items: ['0090017100_14062023002021', '0090017100_14062023002021']
-Stack 2 with items: ['0090017100_14062023002021', '0090017100_14062023002021']
-Heuristic packed all stacks

@@ -1,9 +1,0 @@
-dataset: C
-instance: TA2
-+-----------+
-2D Packing Heuristic in Truck P068384921
-Min2DVol: 15.84 [m2]
-Stack 0 with items: ['0090038300_28022023026765', '0090038300_28022023023810']
-Stack 1 with items: ['0090038300_28022023023810', '0090038300_28022023018154']
-Stack 2 with items: ['0090038300_28022023006176', '0090038300_28022023001146']
-Heuristic packed all stacks
