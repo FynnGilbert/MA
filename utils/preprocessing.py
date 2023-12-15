@@ -2,6 +2,7 @@
 # coding: utf-8
 import polars as pl
 import numpy as np
+import tensorflow as tf
 
 def extract_raw_data(df: pl.DataFrame) -> pl.DataFrame:
     """
@@ -171,11 +172,239 @@ def append_truck_info(df: pl.DataFrame, truck_dims: pl.DataFrame) -> pl.DataFram
     return df
 
 
+def polars_preprocessing_pipeline(
+        df: pl.DataFrame,
+        items: pl.DataFrame,
+        truck_stops: pl.DataFrame,
+        truck_dims: pl.DataFrame
+    ) -> np.array:
+    """
+    Takes the raw dataframe with text column and turns it into
+    a the numpy version of a df with stacks and trucks as rows,
+    which can be grouped by the index column, i.e the first
+    column of the numpy array
+
+
+    """
+    
+    X = (
+        df.lazy()
+        .pipe(extract_raw_data)
+        .pipe(explode_instances_into_stacks)
+        .pipe(explode_stacks_into_items)
+        .pipe(join_items, items)
+        .pipe(group_items_by_stack)
+        .pipe(join_truck_loading_order, truck_stops)
+        .pipe(append_truck_info, truck_dims)
+        .collect()
+        .to_numpy()
+    )
+
+    return X
 
 
 
 
+def get_tensor_representation(X, pad_size=80, packing_clm=6):
+    """
+    Turn the 2D dataframe consisting of example-index,
+    stack info and truck info into a 3D Tensor by adding
+    an example index dimension and padding the variable length
+    stacks to the pad size
+    """
+
+    # add columns for Length and Width Remainder
+    X = np.append(X, np.zeros((X.shape[0], 2)), axis=1)
+    
+    indices = np.unique(X[:, 0])
+    indices = np.sort(indices)
+
+    # (batch_size, ?, features)
+    X = np.array([X[X[:,0] == idx] for idx in indices], dtype = "object")
+
+    # replace the packing order with the stop index (i.e 1-1-1 and 1-1-2 turn to 0 and 1, respectively)
+    #packing_clm = min([i for i, clm in enumerate(df.columns) if clm == "packing_order"])
+    
+    for i, x in enumerate(X):
+        packing_order = x[:,packing_clm]
+        stops = np.unique(packing_order)
+        stops = np.sort(stops)
+        stops = {stop: j for j, stop in enumerate(stops)}
+        stops = [stops[order] for order in packing_order]
+        X[i][:,packing_clm] = stops
+
+    # pad the variable length number of stacks into fixed
+    #  (batch_size, pad_size, features)
+    X = tf.keras.utils.pad_sequences(X, maxlen=pad_size, padding = "post", dtype="float32")
+    # drop the index column (batch_size, pad_len, n_features)
+    X = X[:,:,1:].astype("float32")
+
+    # Add Length and width Remainder
+    for xx in X:
+        truck_width = max(xx[:,1])
+        # Length Remainder
+        xx[:,-2] = truck_width % xx[:,0]
+        # Width Remainder
+        xx[:,-1] = truck_width % xx[:,1]
+    
+    X = np.nan_to_num(X)
+    
+    return X
+
+
+def get_labels(df: pl.DataFrame, pad_size=80) -> dict[str: np.array]:
+    """
+    Take the content of the text-files in the 'raw' column of 
+    the polars dataframe and use regex to extract a number of potential labels.
+
+    Note that the labels all stem from after the first MIP 'Improvement',
+    which is just the initial solution.
+    
+    Returns:
+    --------
+
+    Y : dict[str: np.array]
+        A dictionary containing a list of possible labels
+        The length of the arrays equals the length of the df, i.e the batch size
+
+        There are several potential labels that one might want to predict:
+
+        - Solved:
+            Has the optimal solution been confirmed?
+            
+            Note that we do not call it "optimal", because a solution could be optimal
+            but the MIP solver did you yet confirm that the solution is indeed optimal
+
+        - Improvement:
+            Has an Improvement (other than the initial 'Improvement') been found?
+            This is the main goal of our model, the target with the actual impact on the heuristic
+            
+            There is also the count of improvements, but this makes for a bad target,
+            since the order in which solutions are searched determines the number of improvements.
+            Eg in one run we find three solutions that are each better than the last.
+            If we do the same run again, but happen to seach in the reverse order,
+            we only find a single improvement.
+
+        - Area:
+            Area and Area Ratio constitute the packed Area of the Truck after optimization.
+
+            This might be useful when the model is able to find an improvement by simply swapping
+            a stack with stack that is only a few millimeters wider/longer. This technically this
+            constitutes an improvement, it does not affect the bottom line.
+
+            Therefore the Area Forecast can be used as an additional criterion for the extension
+            of the time limit (If the predictions are reliably accurate)
+            
+            
+    
+    """
+
+    pattern = "Optimal Solution confirmed"
+    y_solved = df["raw"].str.contains(pattern)
+
+    pattern = "MIP Improvement - 2D Vol: \d*\.\d* \[m2\] - packed 2D Vol Ratio\: \d*\.\d* \[\%\] - after \d*\.\d* \[s\]"
+    mip_improvements = df["raw"].str.extract_all(pattern)#.list[-1][2]
+
+    # mip_improvements: pl.Series[list[str]]
+    # with entries according to the pattern, i.e all MIP improvement rows
+    
+    y_num_improvements = mip_improvements.list.len()-1
+    
+    y_improvement = y_num_improvements > 0
+
+    y_packed_area_ratio = mip_improvements.list[-1].str.extract("\: (\d*\.\d*) \[\%\]").cast(pl.Float32)
+
+    y_packed_area = mip_improvements.list[-1].str.extract("- 2D Vol: (\d*\.\d*) \[m2\]").cast(pl.Float32)
+
+    y_first_update = mip_improvements.list[1].str.extract("- after (\d*\.\d*) \[s\]").cast(pl.Float32).fill_null(0)
+    
+    y_last_update = mip_improvements.list[-1].str.extract("- after (\d*\.\d*) \[s\]").cast(pl.Float32)
+
+    # missing stacks:
+    y_stack_not_included = np.zeros((len(df), pad_size), dtype=float)
+    pattern = "Stack (\d*) not in final solution with items:"
+    x = df["raw"].str.extract_all(pattern).map_elements(lambda x: [int(i.split(" ")[1]) for i in x])
+    
+    for i, missing_stacks in enumerate(x):
+        for j in missing_stacks:
+            y_stack_not_included[i, j] +=1
+
+    Y = {
+        "Solved": y_solved.to_numpy().astype("float32"),
+        "Improvement": y_improvement.to_numpy().astype("float32"),
+        "Number_Improvements": y_num_improvements.to_numpy().astype("float32"),
+        "AreaRatio": y_packed_area_ratio.to_numpy().astype("float32"),
+        "Area": y_packed_area.to_numpy().astype("float32"),
+        #np.log1p(y_first_update.to_numpy()),
+        #y_last_update.to_numpy(),
+        "Stacks": y_stack_not_included.astype("float32"),
+    }
+    
+    return Y
 
 
 
+def input_output_generation(
+        X_batch,
+        items: pl.DataFrame,
+        truck_stops: pl.DataFrame,
+        truck_dims: pl.DataFrame,
+        target_labels=["Solved", "Improvement", "AreaRatio", "Stacks"],
+        shuffle=True,
+        pad_size=80,
+    ) -> np.array:
+    """
+
+    Returns:
+    --------
+    X: np.array[float32]
+        3D Feature Tensor of shape (Batch_size, Pad_size, n_features=7)
+
+        - Batch_size: Truck Optimization Instances
+        - Pad_size: Stacks (or Trucks), padded up to create tensors
+        - n_features: Length, Width, Weight, L/W Forced Orientation
+                      packing order, is_truck
+    """
+    
+    df = pl.DataFrame({"raw": X_batch.numpy().astype(str)})
+    X = polars_preprocessing_pipeline(
+            df,
+            items=items,
+            truck_stops=truck_stops,
+            truck_dims=truck_dims,
+        )
+    X = get_tensor_representation(X, pad_size=pad_size)
+
+    # fill final column with bool for stack not in initial solution
+    pattern = "Stack (\d*) missing:"
+    x = df["raw"].str.extract_all(pattern).map_elements(lambda x: [int(i.split(" ")[1]) for i in x])
+
+    for i, missing_stacks in enumerate(x):
+        for j in missing_stacks:
+            X[i, j, 6] +=1
+
+    
+    # extract the time limit
+    pattern = "2D Packing MIP with Time Limit (\d*\.?\d*) \[s\]"
+    x_time_limit = df["raw"].str.extract(pattern).cast(pl.Float32).to_numpy()
+
+    Y = get_labels(df, pad_size=pad_size)
+    Y = [Y[target] for target in target_labels]
+
+    if shuffle:
+        idx = np.arange(X.shape[1])
+        idx = np.random.choice(idx, size=pad_size, replace=False)
+        X = X[:,idx,:]
+
+        # if you shuffle the input order of stacks
+        # you also have to shuffle the output order of stacks
+        if "Stacks" in target_labels:
+            stack_idx = ("Stacks" == np.array(target_labels))
+            stack_idx = np.where(stack_idx)
+            stack_idx = stack_idx[0][0]
+            Y[stack_idx] = Y[stack_idx][:,idx]
+
+    X = [X, x_time_limit]
+    
+    return X, Y
 
