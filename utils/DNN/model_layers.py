@@ -10,7 +10,7 @@ class TransformerEncoder(Layer):
         self,
         units: int,
         num_heads: int,
-        key_dim: int,
+        #key_dim: int,
         idx: int,
         activation: str = "relu",
         upscale_factor: float = 1,
@@ -18,16 +18,18 @@ class TransformerEncoder(Layer):
         use_bias: bool=False,
         bias_regularizer = None,
         use_PreLN: bool=None,
+        seed=3093453,
         **kwargs
     ):
         super().__init__(**kwargs)
 
         self.self_attention_layer = MultiHeadAttention(
-            num_heads=num_heads, key_dim=key_dim,
+            num_heads=num_heads,
+            key_dim=int(units/num_heads),
             dropout=dropout,
             use_bias=use_bias,
             bias_regularizer=bias_regularizer,
-            name=f"Encoder-SelfAttentionLayer-{idx}"
+            name=f"Encoder-SelfAttentionLayer-{idx}",
         )
         
         self.add1 = Add(name=f"Encoder-1st-AdditionLayer-{idx}")
@@ -46,7 +48,8 @@ class TransformerEncoder(Layer):
             name=f"Encoder-FeedForwardLayer_2_{idx}"
         )
         self.dropout_layer = Dropout(
-            rate=dropout
+            rate=dropout,
+            seed=seed
         )
 
         # Actual Parameters:

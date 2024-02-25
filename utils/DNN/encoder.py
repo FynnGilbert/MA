@@ -24,12 +24,13 @@ class SelfAttention(AttentionBase):
     """
     Processes the 'context' sequence (input to the encoder)
     """
-    def call(self, x, use_causal_mask: bool = False):
+    def call(self, x, use_causal_mask: bool = False, seed=3093453):
         attention, attention_scores = super().call(query=x,
                                                    value=x,
                                                    key=x,
                                                    use_causal_mask=use_causal_mask,
                                                    return_attention_scores=True,
+						   seed=seed
                                                    )
         self.last_attention_scores = attention_scores  # cache for plotting
         return self.layer_norm(self.add([x, attention]))
@@ -37,12 +38,12 @@ class SelfAttention(AttentionBase):
 
 
 class FeedForward(tf.keras.layers.Layer):
-    def __init__(self, d_model: int, dff: int, activation="relu", dropout: float = 0.1):
+    def __init__(self, d_model: int, dff: int, activation="relu", dropout: float = 0.1, seed=3093453):
         super().__init__()
         self.ffn = tf.keras.Sequential([
             tf.keras.layers.Dense(dff, activation=activation),
             tf.keras.layers.Dense(d_model),
-            tf.keras.layers.Dropout(dropout)
+            tf.keras.layers.Dropout(dropout, seed=seed)
         ])
         self.add = tf.keras.layers.Add()
         self.layer_norm = tf.keras.layers.LayerNormalization()
@@ -61,7 +62,8 @@ class Encoder(tf.keras.layers.Layer):
                  num_heads: int,
                  activation: str = "relu",
                  dropout: float = 0.1,
-                 name="TransformerEncoder"
+                 name="TransformerEncoder",
+		 seed=3093453,
                  ):
         if num_layers < 1:
             return ValueError("'num_layers' must be >= 1")
@@ -70,8 +72,8 @@ class Encoder(tf.keras.layers.Layer):
         for _ in range(num_layers):
             self.sub_layers.append(
                 tf.keras.Sequential([
-                    SelfAttention(num_heads=num_heads, key_dim=d_model, value_dim=d_model, dropout=dropout),
-                    FeedForward(activation=activation, d_model=d_model, dff=dff, dropout=dropout)
+                    SelfAttention(num_heads=num_heads, key_dim=d_model, value_dim=d_model, dropout=dropout,seed=seed),
+                    FeedForward(activation=activation, d_model=d_model, dff=dff, dropout=dropout, seed=seed)
                 ])
             )
         self.num_layers = num_layers
